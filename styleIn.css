@@ -29,13 +29,11 @@ body{
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
-<<<<<<< HEAD
-=======
 li{
     list-style: none;
 }
 
->>>>>>> 0bcf3d542de8a86827399f258fc75e2bb6548470
+
 .logo{
     display: flex;   
     transition: all 0.5s ease;
@@ -58,14 +56,12 @@ a{
     padding-bottom: 10px;
 }
 
-<<<<<<< HEAD
-=======
+
 li a{
     color: #A4B494;
     text-decoration: none; 
 }
 
->>>>>>> 0bcf3d542de8a86827399f258fc75e2bb6548470
 .fas{
     position: relative;
     width: 70px;
@@ -148,7 +144,7 @@ a:hover{
     width: 230px;
 }
 
-<<<<<<< HEAD
+
 /* insertar blog */
 
 
@@ -169,14 +165,8 @@ a:hover{
 	font-size: 18px;
 	transition: .3s;
 }
-
-
-
-/*formulario*/
-
-=======
 /*formularios*/
->>>>>>> 0bcf3d542de8a86827399f258fc75e2bb6548470
+
 .login-contenedor{
     display: flex;
     align-items: center;
