@@ -86,8 +86,9 @@ a{
     bottom: 0;
 }
 .inicioS{
-    bottom: 0;
+    top: 82%;
     position: absolute;
+   
 }
 .perfil{
     top: 82%;
