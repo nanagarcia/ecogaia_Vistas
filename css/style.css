@@ -94,8 +94,8 @@ li a{
     margin-left: 10px;
 }
 
-a:hover{
-  background: #eee; 
+#barra:hover{
+   background: #eee; 
 }
 
 .barra:hover{
@@ -211,6 +211,30 @@ a:hover{
     align-items: center;
 }
 
+/* Añadir blog */
+.insertar_blog{
+    position: fixed;
+    z-index: 3;
+    margin-left: 90%;
+    margin-bottom: 8%;
+
+}
+.insertar_blog img{
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+.insertar_blog img:hover{
+    width: 55px;
+    
+}
+
+#a_botonMas{
+    padding: 0%;
+    margin: 0%;
+    width: auto;
+}
+
 /* FOOTER */
 footer{
     position: absolute;
@@ -221,7 +245,7 @@ footer{
     border-top: 1px solid white;
     justify-content: space-between;
     margin-top: 100px;
-    background-color: #678663e5;
+    background-color: #678663;
 }
 
 .imagen{

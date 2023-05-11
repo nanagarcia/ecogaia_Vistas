@@ -7,10 +7,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body{
     background-color: white;
-    
-    
 }
 
 /*barra*/
@@ -27,19 +26,20 @@ body{
     transition: width 0.2s linear;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
+
 .logo{
     
     display: flex;   
     transition: all 0.5s ease;
     margin: 10px 0 0 10px;
 }
+
 .logo img{
     width: 45px;
     height: 45px;
     border-radius: 20px;
     margin-top: 2%;
 }
-
 
 a{
     
@@ -49,6 +49,7 @@ a{
     width: 300px;
     padding: 10px;
 }
+
 .fas{
     position: relative;
     width: 70px;
@@ -58,6 +59,7 @@ a{
     text-align: center;
     color: #609966;
 }
+
 .nav-item-nombre{
     position: relative;
     top: 12px;
@@ -116,23 +118,50 @@ a{
 .Telefono{
    display: flex;
    margin-left: 30%;
-    align-items: center;
+   align-items: center;
+
 }
 
 .Telefono img{
     width: 230px;
 }
 
+/* insertar blog */
+
+
+.contenido_blog{
+    font-size: 15px;
+    padding: 15px;
+    background-color: #eee;
+    border-radius: 5px;
+
+}
+
+.textarea h1{
+	left: 10px;
+    margin-bottom: 10px;
+	top: 50%;
+    font-family: 'Quicksand', sans-serif;
+	color: #9999997e;
+	font-size: 18px;
+	transition: .3s;
+}
+
+
+
 /*formulario*/
+
 .login-contenedor{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: center;
 }
+
 .login-contenedor img{
     height: 100px;
 }
+
 .login-contenedor h2{
     margin: 15px 0;
 	color: #609966;
@@ -140,13 +169,16 @@ a{
     font-family: 'Charm', cursive;
 	font-size: 2.9rem;
 }
+
 form{
     width: 360px;
     margin-left: 70px;
 }
+
 .avatar{
     width: 100px;
 }
+
 form h2{
     font-size: 2.0rem;
     font-family: 'Quicksand', sans-serif;
@@ -640,6 +672,11 @@ span{
     background-color: #121212;
 }
 
+/* blog_insertar */
+
+.cancelar img{
+    width: 10px;
+}
 
 
 @media screen and (max-width: 1050px){
