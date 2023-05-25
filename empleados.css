@@ -120,18 +120,58 @@ li a{
     top: 82%;
     position: absolute;
 }
-
-.barras{
-    width: 30%;
-    height: 50%;
-    margin-left: 10%;
-    margin-top: 15%;
-    background-color: rgba(255, 255, 255, 0.174);
-   
+.estadisticas{
+    display: flex;
+    justify-content: center;   
+}
+.statics{
+    display: flex;
+    justify-content: center;   
+}
+.statics2{
+    width: 10%;
+    height: 10%;
+    margin-top: 5%;
+    margin-left: 2%;
+    background-color: rgba(255, 255, 255, 0.174); 
 }
 
+.statics2 h3{
+    font-family: 'Charm', cursive;
+    margin-top: 3%;
+    font-size: 23px;
+}
+.statics2 p{
+    margin-top: 3%;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    text-align: center; 
+}
+
+.barras{
+    width: 25%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 2%;
+    background-color: rgba(255, 255, 255, 0.174);  
+}
+.barras h3{
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+    font-family: 'Quicksand', sans-serif;
+}
+.barras p{
+    color: white;
+    margin-left: 10%;
+    font-family: 'Quicksand', sans-serif;
+}
 .barra2{
-    margin-top: 4%;
     margin-bottom: 4%;
     width: 80%;
     margin-left: 10%;
@@ -140,3 +180,4 @@ li a{
 .progress-bar{
     border-left: 25%;
 }
+
