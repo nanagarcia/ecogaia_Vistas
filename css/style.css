@@ -98,10 +98,13 @@ li a{
     margin-left: 10px;
 }
 
+<<<<<<< HEAD
+=======
 
 #barra:hover{
    background: #eee; 
 }
+>>>>>>> 1ae512dad807a02e416e4ea60cf8e5f1cdb32cd2
 .barra:hover{
     width: 230px;
     transition: all 0.5s ease;
@@ -214,8 +217,47 @@ li a{
 
 .categorias{
     display: flex;
-    justify-content: center;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.card{
+    width: 270px;
+    height: 250px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    box-shadow: 4px 5px 5px #67866394;
+}
+
+.content2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background: #000000a9;
+    opacity: 0;
+    transition: .6s;
+}
+
+.content2 h2{
+    color: white;
+} 
+
+#ver_mas{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #678663;
+}
+
+.card:hover .content2{
+    opacity: 1;
 }
 
 /* Añadir blog */
