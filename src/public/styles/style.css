@@ -98,10 +98,10 @@ li a{
     margin-left: 10px;
 }
 
-
 #barra:hover{
    background: #eee; 
 }
+
 .barra:hover{
     width: 230px;
     transition: all 0.5s ease;
