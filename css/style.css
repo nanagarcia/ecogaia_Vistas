@@ -98,13 +98,10 @@ li a{
     margin-left: 10px;
 }
 
-<<<<<<< HEAD
-=======
-
 #barra:hover{
    background: #eee; 
 }
->>>>>>> 1ae512dad807a02e416e4ea60cf8e5f1cdb32cd2
+
 .barra:hover{
     width: 230px;
     transition: all 0.5s ease;

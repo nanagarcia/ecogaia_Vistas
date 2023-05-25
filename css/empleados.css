@@ -140,3 +140,17 @@ li a{
 .progress-bar{
     border-left: 25%;
 }
+
+/* Inventario empresa */
+
+.inventarioEco{
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 5%;
+    
+}
+
+.titulos{
+    background-color: #609966;
+    color: aliceblue;
+}
