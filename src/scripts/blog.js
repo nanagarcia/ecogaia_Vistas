@@ -20,7 +20,7 @@ $(document).ready((e) => {
           } else {
             titulo = blog.titulo
           }
-          container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><img src='imagenes/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
+          container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
         })
       },
     });
