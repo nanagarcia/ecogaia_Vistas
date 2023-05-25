@@ -179,6 +179,10 @@ h3{
 .progress-bar{
     border-left: 25%;
 }
+<<<<<<< HEAD:css/empleados.css
+
+=======
+>>>>>>> 4a57c6fdf57c43145d35ddf7d53c79401842d766:src/public/styles/empleados.css
 /* Inventario empresa */
 
 .inventarioEco{
@@ -191,4 +195,8 @@ h3{
 .titulos{
     background-color: #609966;
     color: aliceblue;
+<<<<<<< HEAD:css/empleados.css
 }
+=======
+}
+>>>>>>> 4a57c6fdf57c43145d35ddf7d53c79401842d766:src/public/styles/empleados.css
