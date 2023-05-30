@@ -10,7 +10,11 @@
 }
 
 body{
+<<<<<<< HEAD
     background-image: url(../assets/Green\ Tranquil.jpg);
+=======
+    background-image: url(../assets/fondoinicio.jpg);
+>>>>>>> b9ab5f52fa4469ae6ace4960561e57772b046a30
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;

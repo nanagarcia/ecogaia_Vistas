@@ -39,7 +39,6 @@ $(document).ready((e) => {
         type: "GET",
         datatype: "JSON",
         success: (res) => {
-          console.log(res.length)
           if (res.length == 0){
             container.innerHTML= '<p>No se encontraron resultados para "'+titulo+'"</p>'
           } else {
