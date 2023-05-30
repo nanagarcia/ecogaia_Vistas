@@ -305,3 +305,21 @@ footer{
     margin-left: 40px;
 
 }
+
+
+.insertar_blog{
+    position: fixed;
+    z-index: 3;
+    margin-left: 90%;
+    margin-bottom: 8%;
+
+}
+.insertar_blog img{
+
+    width: 60px;
+}
+
+.insertar_blog img:hover{
+    width: 65px;
+    
+}
