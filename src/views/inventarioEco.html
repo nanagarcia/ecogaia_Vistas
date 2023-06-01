@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--css link-------------->
+    <link rel="stylesheet" href="../public/styles/style.css" />
+    <!-- CSS bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JS bootstrapp -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!--link jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!--link js-->
+    <link rel="stylesheet" href="../scripts/carrito.js" />
+    <!--link ajax-------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--fonts-------------->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ecogaia</title>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/hoja.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!--barra navegacion-------------->
+
+    <!-- barra -->
+
+    <nav class="barra">
+      <li>
+        <a href="" class="logo">
+          <img src="../public/assets/hoja.png" alt="" />
+          <span class="nav-item-nombre">Ecogaia</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./inicio.html">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Inicio</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./categorias.html">
+          <i class="fas fa-lines-leaning"></i>
+          <span class="nav-item">Categorias</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fas fa-cart-shopping"></i>
+          <span class="nav-item">Carrito</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fas fa-star"></i>
+          <span class="nav-item">Favoritos</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./Blog.html">
+          <i class="fas fa-paper-plane"></i>
+          <span class="nav-item">Blog</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./perfil.html" class="perfil">
+          <i class="fas fa-user"></i>
+          <span class="nav-item">Perfil</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./home.html" class="registro">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item"> cerrar Sesion</span>
+        </a>
+      </li>
+    </nav>
+
+    <!-- Inventario -->
+
+    <div class="inventarioEco">
+      <table class="table table-hover text-center tabla">
+        <thead>
+          <tr class="titulos">
+            <th scope="col">codigo</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-dark">
+            <th scope="row">1</th>
+            <td>
+              <img
+                id="img-tabla"
+                width="100px"
+                src="https://cdn.pixabay.com/photo/2016/02/29/15/35/soap-1228679_1280.jpg"
+                alt=""
+              />
+            </td>
+            <td>Mark</td>
+            <td>@mdo</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+
+          <tr class="table-dark">
+            <th scope="row">2</th>
+            <td>
+              <img
+                id="img-tabla"
+                width="100px"
+                src="https://cdn.pixabay.com/photo/2019/02/21/23/22/bathroom-4012503_1280.jpg"
+                alt=""
+              />
+            </td>
+            <td>Jacob</td>
+            <td>@fat</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+
+          <tr class="table-dark">
+            <th scope="row">3</th>
+            <td>
+              <img
+                id="img-tabla"
+                width="100px"
+                src="https://cdn.pixabay.com/photo/2021/05/02/21/30/dog-6224800_1280.jpg"
+                alt=""
+              />
+            </td>
+            <td>Larry</td>
+            <td>@twitter</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
