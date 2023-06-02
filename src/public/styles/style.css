@@ -9,13 +9,31 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
+#body1{
     background-image: url(../assets/fondoinicio.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
     background-position:center;
 }
+
+
+#body2{
+    background-image: url(../assets/fondoNegro.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+#body3{
+    background-image: url(../assets/fondogris.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
 
 
 /* BARRA DE NAVEGACION ------------------------------------------------------*/
@@ -593,6 +611,7 @@ input{
 	font-size: 18px;
 	transition: .3s;
 }
+
 /*formularios ----------------------------------------------------------------------*/
 
 .login-contenedor{
@@ -739,6 +758,7 @@ form h2{
 	cursor: pointer;
 	transition: .5s;
 }
+
 .btn:hover{
 	background-position: right;
 }
@@ -903,6 +923,15 @@ span{
     background-color: #121212;
 }
 
+.contenedorIn{
+    margin-left: 62%;
+    margin-top: 3%;
+}
+
+.login-contenedor{
+    margin-top: 5%;
+}
+
 /* blog_insertar -----------------------------------------------------------------*/
 
 .cancelar img{
@@ -1002,3 +1031,7 @@ footer{
     margin-left: 40px;
 
 }
+
+/* Inventario */
+
+
