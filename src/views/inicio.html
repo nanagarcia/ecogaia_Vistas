@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/assets/hoja.png" type="image/x-icon">
+    <!-- TIPOS DE LETRAS -->
+    <link href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS --> 
+    <link rel="stylesheet" href="../public/styles/style.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- JS  -->
+    <link rel="stylesheet" href="../scripts/carrito.js">
+    <!-- CSS bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JS bootstrapp -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Ecogaia</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+    <!-- barra -->
+
+    <nav class="barra">
+
+        <li>
+            <a href="" class="logo">
+                <img src="../public/assets/hoja.png" alt="">
+                <span class="nav-item-nombre">Ecogaia</span>
+            </a>
+        </li>
+    
+        <li>
+            <a href="inicio.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Inicio</span>
+            </a>
+        </li>
+
+        <li>
+            <i class="fas fa-cart-shopping" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+
+            <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="carrito offcanvas-body carrito">
+                    <table class="table table-dark table-hover">
+                        <thead>
+                          <tr class="text-primary">
+                            <th scope="col">#</th>
+                            <th scope="col">Productos</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                          </tr>
+                        </thead>
+                        <tbody class="tbody">
+                          
+                        
+                          
+                        </tbody>
+                      </table>
+                      <br><br>
+                      <div class="row mx-4">
+                        <div class="col">
+                          <h3 class="itemCartTotal text-white">Total: 0</h3>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                          <button class="btn btn-success">COMPRAR</button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+                
+               
+            
+        </li>
+          
+        <li>
+            <a href="#">
+                <i class="fas fa-star"></i>
+                <span class="nav-item">Favoritos</span>
+            </a>
+        </li>
+          
+        <li>
+            <a href="Blog.html">
+                <i class="fas fa-paper-plane"></i>
+                <span class="nav-item">Blog</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="perfil.html" class="perfil">
+                <i class="fas fa-user" ></i>
+                <span class="nav-item">Perfil</span>
+            </a>
+        </li>
+            
+        <li>
+            <a href="home.html" class="registro">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item"> cerrar Sesion</span>
+            </a>
+        </li>
+    
+    </nav>
+
+    <!-- Barra de busqueda -->
+
+    <div class="box">
+
+        <input type="text" placeholder="Serch" />
+        <i class="fa solid fa-magnifying-glass"></i>
+
+    </div>
+
+    <!-- Categorias -->
+
+    <div class="categorias">
+
+        <div class="card " style="--i:url(https://cdn.pixabay.com/photo/2018/01/14/00/05/makeup-3081015_1280.jpg)">
+
+            <div class="content2">
+                <h2>Maquillaje</h2>
+                <a id="ver_mas" href="">Ver detalles</a>
+            </div>
+    
+        </div>
+    
+        <div class="card ms-4" style="--i:url(https://cdn.pixabay.com/photo/2020/02/08/10/35/soap-4829708_1280.jpg)">
+    
+            <div class="content2">
+                <h2>Limpieza hogar</h2>
+                <a id="ver_mas" href="">Ver detalles</a>
+            </div>
+    
+        </div>
+    
+        <div class="card ms-4" style="--i:url(https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_1280.jpg)">
+    
+            <div class="content2">
+                <h2>Mascotas</h2>
+                <a id="ver_mas" href="">Ver detalles</a>
+            </div>
+    
+        </div>
+    
+        <div class="card ms-4" style="--i:url(https://cdn.pixabay.com/photo/2015/08/01/21/13/hygiene-870763_1280.jpg)">
+    
+            <div class="content2">
+                <h2>Higiene Personal</h2>
+                <a id="ver_mas" href="">Ver detalles</a>
+            </div>
+    
+        </div>
+
+    </div>
+    <div class="alert container position-sticky top-0 alert-primary hide" role="alert">
+        Producto Añadido al carrito!
+        </div>
+        <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
+          Producto removido!
+    </div>
+
+    <!-- Contenido -->
+
+    <div class="productos">
+
+        <div class="producto">
+            
+            <img class="" src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class="articulos text-success ">CEPILLO DE DIENTES</h1>
+
+            <p>$1.700</p>
+
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                        
+                            <img class="producto_img " src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="titulo text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <div class="modal-agregar">
+                                <button type="button" class="btn btn-success button">Agregar a Carrito</button>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="articulos producto ms-5">
+
+            <img src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class=" text-success" >CEPILLO DE CABELLO</h1>
+
+            <p>$1.700</p>
+            
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                            <img class="producto_img" src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <button type="button" class="btn btn-success">Agregar a Carrito</button>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="articulos producto ms-5">
+
+            <img src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class="text-success" >MANZANA</h1>
+
+            <p>$1.700</p>
+            
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                            <img class="producto_img" src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <button type="button" class="btn btn-success">Agregar a Carrito</button>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="producto ms-5">
+
+            <img src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class="articulos text-success" >MANGO</h1>
+
+            <p>$1.700</p>
+            
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                            <img class="producto_img" src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <button type="button" class="btn btn-success">Agregar a Carrito</button>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="productos">
+
+        <div class="producto">
+            
+            <img src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class="articulos text-success" >CEPILLO DE DIENTES</h1>
+
+            <p>$1.700</p>
+            
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                            <img class="producto_img" src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <button type="button" class="btn btn-success">Agregar a Carrito</button>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="producto ms-5">
+
+            <img src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class="articulos text-success" >PERA</h1>
+
+            <p>$1.700</p>
+            
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                            <img class="producto_img" src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <button type="button" class="btn btn-success">Agregar a Carrito</button>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="producto ms-5">
+
+            <img src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class="articulos text-success" >PERRO</h1>
+
+            <p>$1.700</p>
+            
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                            <img class="producto_img" src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <button type="button" class="btn btn-success">Agregar a Carrito</button>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="producto ms-5">
+
+            <img src="https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg" alt="producto">
+            
+            <h1 class="articulos text-success" >MORA</h1>
+
+            <p>$1.700</p>
+            
+            <!-- Button trigger modal -->
+
+            <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Mas información
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade w-25" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Mas información</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        
+                            <img class="producto_img" src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png" alt="">
+
+                            <p class="precio">$1.700</p>
+                            
+                            <h1 class="text-success">Cepillo de bambu</h1>
+
+                            <p class="contenido">Lorem ipsum dolor sit amet consec adipisicing elit. Tenetur laborum laudantium dolores nostrum omnis.</p>
+
+                            <button type="button" class="btn btn-success">Agregar a Carrito</button>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+   
+
+     <!-- Footer -->
+
+     <div class="contenido_footer">
+        <footer class="container-fluid align-self-end">
+          <div class="imagen">
+            <img src="../public/assets/logosecundario.png" alt="" />
+            <p>Cumpliendo tus necesidades y las del mundo</p>
+          </div>
+  
+          <div class="redes">
+            <p>Nuestras redes sociales</p>
+  
+            <div class="iconos">
+              <img src="../public/assets/facebook.png" alt="" />
+              <img src="../public/assets/whatsapp.png" alt="" />
+              <img src="../public/assets/instagram.png" alt="" />
+            </div>
+          </div>
+        </footer>
+      </div>
+</body>
+</html>
