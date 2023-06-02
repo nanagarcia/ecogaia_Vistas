@@ -10,11 +10,7 @@
 }
 
 body{
-<<<<<<< HEAD
-    background-image: url(../assets/Green\ Tranquil.jpg);
-=======
     background-image: url(../assets/fondoinicio.jpg);
->>>>>>> b9ab5f52fa4469ae6ace4960561e57772b046a30
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
@@ -225,7 +221,7 @@ li a{
 .card{
     width: 270px;
     height: 250px;
-    border-radius: 5px;
+    border-radius: none;
     background: var(--i);
     background-size: cover;
     box-shadow: 4px 5px 5px #67866394;
