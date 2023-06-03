@@ -307,47 +307,81 @@ li a{
 }
 
 /* añadir a carrito --------------------------------------------------------------*/
-.table{
-    min-height: 40vh;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
-  }
-.alert{
-    z-index: 100;
-  }
-  .table__productos{
-    display: flex;
-  }
-  .table__productos > img{
-    width: 9rem;
-    object-fit: contain;
-    border-radius: 6px;
-    margin-right: 20px;
-  }
-  .table__cantidad > input{
-    width: 40px;
-    border: none;
-    outline: 0;
-    font-size: 16px;
-    font-weight: 700;
-    margin-right: 30px;
-    margin-bottom: 20px;
-  }
-  .hide, .remove{
-    display: none;
-  }
-  h5{
-    margin-left: 25%;
-    font-family: 'Charm', cursive;
+  .nav-card li {
+    padding: 9px;
     font-weight: bold;
-    
-  }
-  .offcanvas-header{
-    margin-top: 5%;
-    color:#609966;
-    
-  }
+}
+/*Acomodar los elementos de nuestro carrito de compras*/
+.lista div {
+    display: none;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-top: solid thin gray;
+}
+
+.container .buy-card > .lista div {
+    display: flex;
+}
+
+.lista img {
+    width: 100px;
+}
+
+.lista p {
+    width: 300px;
+    font-size: 1.3rem;
+}
+
+.lista p:nth-child(4) {
+    padding-left: 40px;
+}
+
+.lista p:last-child span {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+
+.container .nav-card {
+    font-size: 16px;
+    display: flex;
+    border-bottom: solid thin #e1e1e1;
+}
+
+/*Acomodar elementos en carrito*/
+.contenedorCarrito {
+    display: none;
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-top: solid thin gray;
+}
+
+.container  .buy-card > .contenedorCarrito  {
+    display: flex;
+}
+
+.contenedorCarrito img{
+    width: 100px;
+}
+
+.contenedorCarrito p {
+    width: 300px;
+    font-size: 1.3rem;
+}
+
+.contenedorCarrito :nth-child(4) {
+    padding-left: 40px;
+}
+
+.contenedorCarrito p:last-child span {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: #fff;
+}
+
 
 /*Estadisticas ------------------------------------------------------------------*/
 .estadisticas{
