@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-
-    let tabla = document.querySelector('#tabla')
-    tabla.innerHTML = '<thead><th>Codigo</th><th>Nombre</th><th>Imagen</th><th>Categoria</th><th>Cantidad</th><th>Precio</th></thead>'
-
     $.ajax({
         url:"http://localhost:8080/listarProducto",
         type: "GET",
@@ -26,7 +22,7 @@ $(document).ready(function(){
                 + invt.prod_Imagen + '</td><td>'
                 + invt.prod_Categoria + '</td><td>'
                 + invt.prod_Cantidad + '</td><td>'
-                + invt.prod_Precio + '</td><td>'
+                + invt.prod_Precio + '</td>'
 
                 
             });

@@ -413,15 +413,54 @@ h3{
 /* Inventario empresa ---------------------------------------------------------- */
 
 .inventarioEco{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 10%;
     margin-right: 5%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulos{
     background-color: #609966;
+    color: aliceblue;   
+}
+
+#tabla{
+    border: rgba(240, 248, 255, 0.075) 2px solid;
+    background-color: #121212e1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#tabla td{
     color: aliceblue;
+    height: 60px;
+    border-right: rgba(240, 248, 255, 0.075) 2px solid;
+}
+
+.titulo_invt{
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 4%;
+
+}
+
+/* botones inventario */
+
+
+.btn_invt{
+    background-color: #609966;
+    color: aliceblue;
+    border-radius: 4px;
+    padding: 7px;
+    margin-right: 20px;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    
 }
 
 
@@ -1036,5 +1075,6 @@ footer{
 }
 
 /* Inventario */
+
 
 

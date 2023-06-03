@@ -83,6 +83,13 @@
           </li>
 
           <li>
+            <a href="./inventarioEco.html" id="inventario">
+              <i class="fas fa-folder-open"></i>
+              <span class="nav-item">Repartidor</span>
+            </a>
+          </li>
+
+          <li>
             <a href="./home.html" class="registro">
               <i class="fas fa-sign-out-alt"></i>
               <span class="nav-item"> cerrar Sesion</span>
@@ -92,77 +99,40 @@
 
         <!-- Inventario -->
 
-        <div class="col-6 m-5 table thead-da tabla_invt">
+        
 
-            <table class=" table table-hover text.hover text-center"  id="tabla">
+        <div class="inventarioEco">
 
-            </table>
+          <h2 class="titulo_invt" >Inventario Ecogaia</h2>
 
-        </div>
-
-        <!-- <div class="inventarioEco">
-          <table class="table table-hover text-center tabla">
+          <table class="table table-hover text-center" id="tabla">
             <thead>
-              <tr class="titulos">
-                <th scope="col">codigo</th>
+              <tr class="titulos ">
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
                 <th scope="col">Imagen</th>
-                <th scope="col">Producto</th>
                 <th scope="col">Categoria</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">Precio</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="table-dark">
-                <th scope="row">1</th>
-                <td>
-                  <img
-                    id="img-tabla"
-                    width="100px"
-                    src="https://cdn.pixabay.com/photo/2016/02/29/15/35/soap-1228679_1280.jpg"
-                    alt=""
-                  />
-                </td>
-                <td>Mark</td>
-                <td>@mdo</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
 
-              <tr class="table-dark">
-                <th scope="row">2</th>
-                <td>
-                  <img
-                    id="img-tabla"
-                    width="100px"
-                    src="https://cdn.pixabay.com/photo/2019/02/21/23/22/bathroom-4012503_1280.jpg"
-                    alt=""
-                  />
-                </td>
-                <td>Jacob</td>
-                <td>@fat</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
 
-              <tr class="table-dark">
-                <th scope="row">3</th>
-                <td>
-                  <img
-                    id="img-tabla"
-                    width="100px"
-                    src="https://cdn.pixabay.com/photo/2021/05/02/21/30/dog-6224800_1280.jpg"
-                    alt=""
-                  />
-                </td>
-                <td>Larry</td>
-                <td>@twitter</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-            </tbody>
           </table>
-        </div> -->
+
+          <!-- Botones CRUD -->
+
+          <div class="btn_crud ">
+
+            <input class="btn_invt btn_Agre" type="button" value="Agregar" id="contrasenia" />
+            <input class="btn_invt btn_Eli" type="button" value="Eliminar" id="contrasenia" />
+            <input class="btn_invt" type="button" value="Actualizar" id="contrasenia" />
+
+          </div>
+
+        </div>
+
+        
 
         <script src="../scripts/inventario.js"></script>
 
