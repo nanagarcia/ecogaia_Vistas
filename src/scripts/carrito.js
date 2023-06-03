@@ -1,139 +1,96 @@
-const Clickbutton = document.querySelectorAll('.button')
-const tbody = document.querySelector('.tbody')
-let carrito = []
+//Variables
+const carrito = document.getElementById("carrito"),
+      Listaproductos = document.getElementById("productos"),
+      contenedorCarrito = document.querySelector('.buy-card .lista'),
+      vaciarCarritoBtn = document.querySelector('#vaciar_carrito');
 
-Clickbutton.forEach(btn => {
-  btn.addEventListener('click', addToCarritoItem)
-})
+let articulosCarrito = [];
 
+agregarProductosCarrito()
 
-function addToCarritoItem(e){
-  const button = e.target
-  const item = button.closest('.modal-body')
-  const itemTitle = item.querySelector('.titulo').textContent;
-  const itemPrice = item.querySelector('.precio').textContent;
-  const itemImg = item.querySelector('.producto_img').src;
-  
-  const newItem = {
-    title: itemTitle,
-    precio: itemPrice,
-    img: itemImg,
-    cantidad: 1
-  }
+function agregarProductosCarrito(){
+  Listaproductos.addEventListener('click', agregarProducto);
 
-  addItemCarrito(newItem)
-}
+  carrito.addEventListener('click', eliminarProducto);
 
-
-function addItemCarrito(newItem){
-
-  const alert = document.querySelector('.alert')
-
-  setTimeout( function(){
-    alert.classList.add('hide')
-  }, 2000)
-    alert.classList.remove('hide')
-
-  const InputElemnto = tbody.getElementsByClassName('input__elemento')
-  for(let i =0; i < carrito.length ; i++){
-    if(carrito[i].title.trim() === newItem.title.trim()){
-      carrito[i].cantidad ++;
-      const inputValue = InputElemnto[i]
-      inputValue.value++;
-      CarritoTotal()
-      return null;
-    }
-  }
-  
-  carrito.push(newItem)
-  
-  renderCarrito()
-} 
-
-
-function renderCarrito(){
-  tbody.innerHTML = ''
-  carrito.map(item => {
-    const tr = document.createElement('tr')
-    tr.classList.add('ItemCarrito')
-    const Content = `
-    
-    <th scope="row">1</th>
-            <td class="table__productos">
-              <img src=${item.img}  alt="">
-              <h6 class="title">${item.title}</h6>
-            </td>
-            <td class="table__price"><p>${item.precio}</p></td>
-            <td class="table__cantidad">
-              <input type="number" min="1" value=${item.cantidad} class="input__elemento">
-              <button class="delete btn btn-danger">x</button>
-            </td>
-    
-    `
-    tr.innerHTML = Content;
-    tbody.append(tr)
-
-    tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
-    tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
-  })
-  CarritoTotal()
-}
-
-function CarritoTotal(){
-  let Total = 0;
-  const itemCartTotal = document.querySelector('.itemCartTotal')
-  carrito.forEach((item) => {
-    const precio = Number(item.precio.replace("$", ''))
-    Total = Total + precio*item.cantidad
+  vaciarCarritoBtn.addEventListener('click', e => {
+    articulosCarrito = [];
+    limpiarHTML()
   })
 
-  itemCartTotal.innerHTML = `Total $${Total}`
-  addLocalStorage()
 }
 
-function removeItemCarrito(e){
-  const buttonDelete = e.target
-  const tr = buttonDelete.closest(".ItemCarrito")
-  const title = tr.querySelector('.title').textContent;
-  for(let i=0; i<carrito.length ; i++){
+function agregarProducto(e){
+  if(e.target.classList.contains("agregar-carrito")){
+    const productoseleccionado = e.target.parentElement.parentElement;
+    leerInfo(productoseleccionado)
+  }
+}
 
-    if(carrito[i].title.trim() === title.trim()){
-      carrito.splice(i, 1)
-    }
+function eliminarProducto(e){
+  if(e.target.classList.contains("borrar-producto")){
+    const prodctoId = e.target.getAttribute('data-id');
+
+    //Eliminar del arreglo del articulosCarrito por el data-id
+    articulosCarrito = articulosCarrito.filter(produ => produ.id !== prodctoId)
+    carritoHTML()
+  }
+}
+
+//Leer el contenido de nuestro HTML al que le dimos click y extrae la info del curso
+function leerInfo(produ) {
+  //Crear un objeto con el contenido del curso actual
+  const infoProdu = {
+      imagen : produ.querySelector('producto_img').src,
+      titulo: produ.querySelector('titulo').textContent,
+      precio: produ.querySelector('.precio').textContent,
+      id : produ.querySelector('button').getAttribute('data-id'),
+      cantidad : 1
   }
 
-  const alert = document.querySelector('.remove')
+  //Revisa si un elemento ya existe en el carrito
+  const existe = articulosCarrito.some(produ => produ.id === infoProdu.id)
 
-  setTimeout( function(){
-    alert.classList.add('remove')
-  }, 2000)
-    alert.classList.remove('remove')
-
-  tr.remove()
-  CarritoTotal()
+  if (existe) {
+      //Actualizar la cantidad
+      const productos = articulosCarrito.map(produ => {
+          if (produ.id === infoProdu.id) {
+              produ.cantidad++;
+              return produ 
+          } else {
+              return produ;
+          }
+      });
+      [...articulosCarrito,infoProdu]
+  } else {
+      //Agregamos elementos al carrito de compras
+      articulosCarrito = [...articulosCarrito,infoProdu]
+  }
+  carritoHTML()
 }
 
-function sumaCantidad(e){
-  const sumaInput  = e.target
-  const tr = sumaInput.closest(".ItemCarrito")
-  const title = tr.querySelector('.title').textContent;
-  carrito.forEach(item => {
-    if(item.title.trim() === title){
-      sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
-      item.cantidad = sumaInput.value;
-      CarritoTotal()
-    }
-  })
+//Muestra el carrito en el HTML
+
+function carritoHTML() {
+  limpiarHTML()
+  //Recorre el carrito de compras y genera el HTML
+  articulosCarrito.forEach(produ => {
+      const fila = document.createElement('div');
+      fila.innerHTML = `
+          <img src="${produ.imagen}"></img>
+          <p>${produ.titulo}</p>
+          <p>${produ.precio}</p>
+          <p>${produ.cantidad}</p>
+          <p><span class="borrar-curso" data-id="${produ.id}">X</span></p>
+      `;
+
+      contenedorCarrito.appendChild(fila)
+  });
 }
 
-function addLocalStorage(){
-  localStorage.setItem('carrito', JSON.stringify(carrito))
-}
-
-window.onload = function(){
-  const storage = JSON.parse(localStorage.getItem('carrito'));
-  if(storage){
-    carrito = storage;
-    renderCarrito()
+//Elimina los cursos de la lista_de_cursos
+function limpiarHTML() {
+  while (contenedorCarrito.firstChild) {
+      contenedorCarrito.removeChild(contenedorCarrito.firstChild)
   }
 }
