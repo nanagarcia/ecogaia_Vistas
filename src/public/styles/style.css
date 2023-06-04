@@ -1005,7 +1005,8 @@ span{
 }
 
 .login-contenedor{
-    margin-top: 5%;
+    margin-top: 2%;
+    margin-left: 60%;
 }
 
 /* blog_insertar -----------------------------------------------------------------*/
@@ -1105,10 +1106,5 @@ footer{
 
 .info_productos .texto{
     margin-left: 40px;
-
 }
-
-/* Inventario */
-
-
 

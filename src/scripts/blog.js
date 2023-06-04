@@ -1,5 +1,10 @@
+import { on_session } from "./index.js";
+
 $(document).ready((e) => {
-    const container = document.getElementById("container")
+  if(!on_session()) {
+    $(".insertar_blog")[0].style.display = "none"
+  }
+  const container = document.getElementById("container")
   const listar = ()=> {
     $.ajax({
       url: "http://localhost:8080/listarTip",

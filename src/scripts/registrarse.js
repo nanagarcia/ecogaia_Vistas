@@ -1,4 +1,7 @@
+import { on_session } from "./index.js";
+
 $(document).ready((e) => {
+
   $("#sign_in").on("click", () => {
     const user = {
       id_usuario: 0,

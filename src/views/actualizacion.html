@@ -21,14 +21,20 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
     />
+    <!-- JS -->
+    <script type="module" src="../scripts/actualizar_usuario.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
     <!--icono-------------->
-    <link rel="shortcut icon" href="../public/assets/hoja.png" type="image/x-icon" />
-    <!--ajax-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--js-->
-    <script type="module" src="../scripts/registrarse.js"></script>
+    <link
+      rel="shortcut icon"
+      href="../public/assets/hoja.png"
+      type="image/x-icon"
+    />
   </head>
-
   <body id="body3">
     <!--barra navegacion-------------->
     <nav class="barra">
@@ -38,28 +44,28 @@
           <span class="nav-item-nombre">Ecogaia</span>
         </a>
       </li>
-
+  
       <li id="op1">
         <a href="./index.html" class="home">
           <i class="fas fa-home"></i>
           <span class="nav-item">Home</span>
         </a>
       </li>
-
+  
       <li id="op2">
         <a href="./nosotros.html" class="nosotros">
           <i class="fas fa-users"></i>
           <span class="nav-item">Nosotros</span>
         </a>
       </li>
-
+  
       <li id="op3">
         <a href="./Blog.html">
           <i class="fas fa-paper-plane"></i>
           <span class="nav-item">Blog</span>
         </a>
       </li>
-
+  
       <li id="op4">
         <a id="" href="#">
           <i class="fas fa-cart-shopping"></i>
@@ -73,14 +79,14 @@
           <span class="nav-item">Favoritos</span>
         </a>
       </li>
-
+  
       <li id="op6">
         <a href="./registrarse.html" class="registro">
           <i class="fas fa-tasks"></i>
           <span class="nav-item">Registrarse</span>
         </a>
       </li>
-
+  
       <li id="op7">
         <a href="./iniciosesion.html" class="inicio2">
           <i class="fas fa-sign-out-alt"></i>
@@ -88,24 +94,28 @@
         </a>
       </li>
     </nav>
-    <!--imagen fondo-------------->
-    <!-- <img src="../public/assets/fondogris.png" class="wave" alt="" />
 
-    <div class="contenedorIn">
-      <div class="Telefono">
+    <!--logotipo-------------->
+      <!-- <div class="Telefono">
         <img src="../public/assets/logosecundario.png" alt="" />
       </div> -->
-      <!--registro usuario-------------->
+
+      <!--actualizar datos-------------->
+
       <div class="login-contenedor">
         <form action="">
-          <h2>Registro</h2>
+          <h2>Actualizar</h2>
           <div class="input-div">
             <div class="i">
               <i class="fas fa-user"></i>
             </div>
             <div>
-              <h5>Ingrese su Nombre Completo</h5>
-              <input id="nombre" class="inputIn" type="text" required />
+              <input
+                class="inputIn"
+                type="text"
+                id="nombre"
+                placeholder="Nombre Completo"
+              />
             </div>
           </div>
           <div class="input-div">
@@ -113,8 +123,12 @@
               <i class="fas fa-envelope"></i>
             </div>
             <div>
-              <h5>Ingrese su Correo</h5>
-              <input id="correo" class="inputIn" type="text" required />
+              <input
+                class="inputIn"
+                type="text"
+                placeholder="Correo"
+                id="correo"
+              />
             </div>
           </div>
           <div class="input-div">
@@ -122,8 +136,12 @@
               <i class="fas fa-tent"></i>
             </div>
             <div>
-              <h5>Ingrese su Direccion</h5>
-              <input id="direccion" class="inputIn" type="text" required />
+              <input
+                class="inputIn"
+                type="text"
+                placeholder="Direccion"
+                id="direccion"
+              />
             </div>
           </div>
           <div class="input-div">
@@ -131,8 +149,12 @@
               <i class="fas fa-unlock"></i>
             </div>
             <div>
-              <h5>Ingrese su Contraseña</h5>
-              <input id="contrasenia" class="inputIn" type="text" required />
+              <input
+                class="inputIn"
+                type="password"
+                placeholder="Contraseña"
+                id="contrasenia"
+              />
             </div>
           </div>
           <div class="input-div">
@@ -140,8 +162,12 @@
               <i class="fas fa-lock"></i>
             </div>
             <div>
-              <h5>Confirmar Contraseña</h5>
-              <input id="confirmacion" class="inputIn" type="text" required />
+              <input
+                class="inputIn"
+                type="password"
+                placeholder="Confirmar Contraseña"
+                id="con_contrasenia"
+              />
             </div>
           </div>
           <div class="input-div">
@@ -149,14 +175,17 @@
               <i class="fas fa-phone-flip"></i>
             </div>
             <div>
-              <h5>Ingrese su Telefono</h5>
-              <input id="telefono" class="inputIn" type="text" required />
+              <input
+                class="inputIn"
+                type="text"
+                placeholder="Telefono"
+                id="telefono"
+              />
             </div>
           </div>
           <!--boton-------------->
-          <input type="submit" class="btnForms" id="sign_in" value="Registrar">
+          <input type="submit" class="btnForms" value="Actualizar" />
         </form>
       </div>
-    </div>
   </body>
 </html>

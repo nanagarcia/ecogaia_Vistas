@@ -26,53 +26,70 @@
     <!--ajax-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--js-->
-    <script src="../scripts/iniciosesion.js"></script>
+    <script type="module" src="../scripts/iniciosesion.js"></script>
   </head>
   
   <body id="body3">
 
     <nav class="barra">
-      <ul class="app">
-        <li>
-          <a href="" class="logo">
-            <img src="../public/assets/hoja.png" alt="" />
-            <span class="nav-item-nombre">Ecogaia</span>
-          </a>
-        </li>
+      <li id="">
+        <a href="#" class="logo">
+          <img src="../public/assets/hoja.png" alt="" />
+          <span class="nav-item-nombre">Ecogaia</span>
+        </a>
+      </li>
 
-        <li>
-          <a href="./home.html">
-            <i class="fas fa-home"></i>
-            <span class="nav-item">Home</span>
-          </a>
-        </li>
+      <li id="op1">
+        <a href="./index.html" class="home">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a>
+      </li>
 
-        <li>
-          <a href="./nosotros.html">
-            <i class="fas fa-users"></i>
-            <span class="nav-item">Nosotros</span>
-          </a>
-        </li>
+      <li id="op2">
+        <a href="./nosotros.html" class="nosotros">
+          <i class="fas fa-users"></i>
+          <span class="nav-item">Nosotros</span>
+        </a>
+      </li>
 
-        <li>
-          <a href="./BlogAnt.html">
-            <i class="fas fa-paper-plane"></i>
-            <span class="nav-item">Blog</span>
-          </a>
-        </li>
+      <li id="op3">
+        <a href="./Blog.html">
+          <i class="fas fa-paper-plane"></i>
+          <span class="nav-item">Blog</span>
+        </a>
+      </li>
 
-        <li>
-          <a href="./registrarse.html" class="registro">
-            <i class="fas fa-tasks"></i>
-            <span class="nav-item">Registrarse</span>
-          </a>
-        </li>
-      </ul>
+      <li id="op4">
+        <a id="" href="#">
+          <i class="fas fa-cart-shopping"></i>
+          <span class="nav-item">Carrito</span>
+        </a>
+      </li>
+  
+      <li id="op5">
+        <a id="" href="#">
+          <i class="fas fa-star"></i>
+          <span class="nav-item">Favoritos</span>
+        </a>
+      </li>
+
+      <li id="op6">
+        <a href="./registrarse.html" class="registro">
+          <i class="fas fa-tasks"></i>
+          <span class="nav-item">Registrarse</span>
+        </a>
+      </li>
+
+      <li id="op7">
+        <a href="./iniciosesion.html" class="inicio2">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Inicio Sesion</span>
+        </a>
+      </li>
     </nav>
 
     <!-- <img src="../public/assets/fondogris.png" class="wave" alt="" /> -->
-
-    <div class="contenedorIn">
       <!-- <div class="Telefono">
         <img src="../public/assets/logosecundario.png" alt="" />
       </div> -->
@@ -86,8 +103,7 @@
               <i class="fas fa-user"></i>
             </div>
             <div>
-              <h5>Email</h5>
-              <input class="inputIn" type="text" id="correo" />
+              <input class="inputIn" type="text" id="correo" placeholder="Correo"/>
             </div>
           </div>
           <div class="input-div">
@@ -95,13 +111,11 @@
               <i class="fas fa-user"></i>
             </div>
             <div>
-              <h5>Password</h5>
-              <input class="inputIn" type="password" id="contrasenia" />
+              <input class="inputIn" type="password" id="contrasenia" placeholder="Contraseña"/>
             </div>
           </div>
           <input type="button" class="btnForms" value="Login" id="log_in" />
         </form>
       </div>
-    </div>
   </body>
 </html>
