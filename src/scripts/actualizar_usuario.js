@@ -1,3 +1,5 @@
+import { on_session } from "./index.js";
+
 $(document).ready((e) => {
   const id = sessionStorage.getItem("status");
   var nombre = $("#nombre");
@@ -7,7 +9,7 @@ $(document).ready((e) => {
   var contrasenia = $("#contrasenia");
   var rol = "";
   $.ajax({
-    url: "http://localhost:8080/usuarioId/" + id,
+    url: "http://localhost:8080/usuario/" + id,
     type: "GET",
     datatype: "JSON",
     success: (res) => {

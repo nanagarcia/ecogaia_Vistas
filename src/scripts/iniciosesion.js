@@ -1,3 +1,5 @@
+import { on_session } from "./index.js";
+
 $(document).ready((e) => {
   $("#log_in").on("click", () => {
     const email = $("#correo").val();

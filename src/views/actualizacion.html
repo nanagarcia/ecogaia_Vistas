@@ -6,18 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecogaia</title>
     <!--css link-------------->
-<<<<<<< HEAD:src/views/actualizacion.html
-    <link rel="stylesheet" href="../public/styles/styleIn.css" />
-    <!-- JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.js"
-      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-      crossorigin="anonymous"
-    ></script>
-    <script src="../scripts/actualizar_usuario.js"></script>
-=======
     <link rel="stylesheet" href="../public/styles/style.css" />
->>>>>>> 561c1822273b9e38e31e8c7d62bfc424f44ba718:src/views/AtualizarPerfil.html
     <!--link ajax-------------->
     <link
       rel="stylesheet"
@@ -32,6 +21,13 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
     />
+    <!-- JS -->
+    <script type="module" src="../scripts/actualizar_usuario.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
     <!--icono-------------->
     <link
       rel="shortcut icon"
@@ -42,60 +38,64 @@
   <body id="body3">
     <!--barra navegacion-------------->
     <nav class="barra">
-      <ul class="app">
-        <li>
-          <a href="./home.html" class="logo">
-            <img src="../public/assets/hoja.png" alt="" />
-            <span class="nav-item-nombre">Ecogaia</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="./index.html">
-            <i class="fas fa-home"></i>
-            <span class="nav-item">Inicio</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class="fas fa-cart-shopping"></i>
-            <span class="nav-item">Carrito</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-            <i class="fas fa-star"></i>
-            <span class="nav-item">Favoritos</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="./blog.html">
-            <i class="fas fa-paper-plane"></i>
-            <span class="nav-item">Blog</span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="./perfil.html" class="perfil">
-            <i class="fas fa-user"></i>
-            <span class="nav-item">Perfil</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="./home.html" class="registro">
-            <i class="fas fa-sign-out-alt"></i>
-            <span class="nav-item"> cerrar Sesion</span>
-          </a>
-        </li>
-      </ul>
+      <li id="">
+        <a href="#" class="logo">
+          <img src="../public/assets/hoja.png" alt="" />
+          <span class="nav-item-nombre">Ecogaia</span>
+        </a>
+      </li>
+  
+      <li id="op1">
+        <a href="./index.html" class="home">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a>
+      </li>
+  
+      <li id="op2">
+        <a href="./nosotros.html" class="nosotros">
+          <i class="fas fa-users"></i>
+          <span class="nav-item">Nosotros</span>
+        </a>
+      </li>
+  
+      <li id="op3">
+        <a href="./Blog.html">
+          <i class="fas fa-paper-plane"></i>
+          <span class="nav-item">Blog</span>
+        </a>
+      </li>
+  
+      <li id="op4">
+        <a id="" href="#">
+          <i class="fas fa-cart-shopping"></i>
+          <span class="nav-item">Carrito</span>
+        </a>
+      </li>
+  
+      <li id="op5">
+        <a id="" href="#">
+          <i class="fas fa-star"></i>
+          <span class="nav-item">Favoritos</span>
+        </a>
+      </li>
+  
+      <li id="op6">
+        <a href="./registrarse.html" class="registro">
+          <i class="fas fa-tasks"></i>
+          <span class="nav-item">Registrarse</span>
+        </a>
+      </li>
+  
+      <li id="op7">
+        <a href="./iniciosesion.html" class="inicio2">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Inicio Sesion</span>
+        </a>
+      </li>
     </nav>
 
     <!--logotipo-------------->
-    <div class="contenedorIn">
       <!-- <div class="Telefono">
         <img src="../public/assets/logosecundario.png" alt="" />
       </div> -->
@@ -184,13 +184,8 @@
             </div>
           </div>
           <!--boton-------------->
-<<<<<<< HEAD:src/views/actualizacion.html
-          <input type="button" class="btn" value="Actualizar" id="actualizar" />
-=======
           <input type="submit" class="btnForms" value="Actualizar" />
->>>>>>> 89c845545baaa8fa9ba75474b597e444add8fd86:src/views/AtualizarPerfil.html
         </form>
       </div>
-    </div>
   </body>
 </html>
