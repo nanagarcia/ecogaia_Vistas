@@ -2,13 +2,31 @@ import { on_session } from "./index.js";
 
 $(document).ready((e) => {
     const table = document.querySelector(".table-content")
-    var id = sessionStorage.getItem("status")
+    var user = sessionStorage.getItem("user")
+
+    $.ajax({
+        url: "http://localhost:8080/usuario/"+user,
+        type: "GET",
+        datatype: "JSON",
+        success: (res) => {
+            console.log(res)
+            if (res.usu_nombre.length > 20) {
+                $("#userName")[0].innerHTML = res.usu_nombre.slice(0,15) + " ..."
+            } else {
+                $("#userName")[0].innerHTML = res.usu_nombre
+            }
+            
+            $("#userEmail")[0].innerHTML = res.usu_correo
+        }
+    })
+
   $.ajax({
-    url: "http://localhost:8080/favoritosUsuario/"+id,
+    url: "http://localhost:8080/favoritosUsuario/"+user,
     type: "GET",
     datatype: "JSON",
     success: (res) => {
         table.innerHTML = ""
+        $("#cantFav")[0].innerHTML = res.length
         var i = 0
         if (res.length > 0) {
             res.forEach(fav => {

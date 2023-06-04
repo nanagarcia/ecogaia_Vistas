@@ -25,8 +25,6 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
-    <!--link js-->
-    <link rel="stylesheet" href="../scripts/carrito.js" />
     <!--link ajax-------------->
     <link
       rel="stylesheet"
@@ -42,6 +40,7 @@
       rel="stylesheet"
     />
     <title>Ecogaia</title>
+    <script type="module" src="../scripts/inventario.js"></script>
     <link
       rel="shortcut icon"
       href="../public/assets/hoja.png"
@@ -49,93 +48,120 @@
     />
   </head>
   <body id="body2">
-        <!--barra navegacion-------------->
+    <!--barra navegacion-------------->
 
-        <!-- barra -->
+    <!-- barra -->
+    <nav class="barra">
+      <li id="">
+        <a href="#" class="logo">
+          <img src="../public/assets/hoja.png" alt="" />
+          <span class="nav-item-nombre">Ecogaia</span>
+        </a>
+      </li>
 
-        <nav class="barra">
-          <li>
-            <a href="" class="logo">
-              <img src="../public/assets/hoja.png" alt="" />
-              <span class="nav-item-nombre">Ecogaia</span>
-            </a>
-          </li>
+      <li id="op1">
+        <a href="./index.html" class="home">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a>
+      </li>
 
-          <li>
-            <a href="./inicio.html">
-              <i class="fas fa-home"></i>
-              <span class="nav-item">Inicio</span>
-            </a>
-          </li>
+      <li id="op2">
+        <a href="./nosotros.html" class="nosotros">
+          <i class="fas fa-users"></i>
+          <span class="nav-item">Nosotros</span>
+        </a>
+      </li>
 
-          <li>
-            <a href="./inventarioEco.html" id="inventario">
-              <i class="fas fa-folder-open"></i>
-              <span class="nav-item">Inventario</span>
-            </a>
-          </li>
+      <li id="op3">
+        <a href="./Blog.html">
+          <i class="fas fa-paper-plane"></i>
+          <span class="nav-item">Blog</span>
+        </a>
+      </li>
 
-          <li>
-            <a href="./estadisticas.html" >
-              <i class="fas fa-ranking-star"></i>
-              <span class="nav-item">Estadisticas</span>
-            </a>
-          </li>
+      <li id="op4">
+        <a id="" href="#">
+          <i class="fas fa-cart-shopping"></i>
+          <span class="nav-item">Carrito</span>
+        </a>
+      </li>
+      <li id="op5">
+        <a href="./inventarioEco.html" id="inventario">
+          <i class="fas fa-folder-open"></i>
+          <span class="nav-item">Inventario</span>
+        </a>
+      </li>
 
-          <li>
-            <a href="./inventarioEco.html" id="inventario">
-              <i class="fas fa-folder-open"></i>
-              <span class="nav-item">Repartidor</span>
-            </a>
-          </li>
+      <li id="op6">
+        <a href="./estadisticas.html" >
+          <i class="fas fa-ranking-star"></i>
+          <span class="nav-item">Estadisticas</span>
+        </a>
+      </li>
 
-          <li>
-            <a href="./home.html" class="registro">
-              <i class="fas fa-sign-out-alt"></i>
-              <span class="nav-item"> cerrar Sesion</span>
-            </a>
-          </li>
-        </nav>
+      <li id="op7">
+        <a href="./inventarioEco.html" id="inventario">
+          <i class="fas fa-folder-open"></i>
+          <span class="nav-item">Repartidor</span>
+        </a>
+      </li>
 
-        <!-- Inventario -->
+      <li id="op8">
+        <a href="./registrarse.html" class="registro">
+          <i class="fas fa-tasks"></i>
+          <span class="nav-item">Registrarse</span>
+        </a>
+      </li>
 
-        
+      <li id="op9">
+        <a href="./iniciosesion.html" class="inicio2">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Inicio Sesion</span>
+        </a>
+      </li>
+    </nav>
 
-        <div class="inventarioEco">
+    <!-- Inventario -->
 
-          <h2 class="titulo_invt" >Inventario Ecogaia</h2>
+    <div class="inventarioEco">
+      <h2 class="titulo_invt">Inventario Ecogaia</h2>
 
-          <table class="table table-hover text-center" id="tabla">
-            <thead>
-              <tr class="titulos ">
-                <th scope="col">Codigo</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Precio</th>
-              </tr>
-            </thead>
+      <table class="table table-hover text-center" id="tabla">
+        <thead>
+          <tr class="titulos">
+            <th scope="col">Codigo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+      </table>
 
+      <!-- Botones CRUD -->
 
-          </table>
-
-          <!-- Botones CRUD -->
-
-          <div class="btn_crud ">
-
-            <input class="btn_invt btn_Agre" type="button" value="Agregar" id="contrasenia" />
-            <input class="btn_invt btn_Eli" type="button" value="Eliminar" id="contrasenia" />
-            <input class="btn_invt" type="button" value="Actualizar" id="contrasenia" />
-
-          </div>
-
-        </div>
-
-        
-
-        <script src="../scripts/inventario.js"></script>
-
-
+      <div class="btn_crud">
+        <input
+          class="btn_invt btn_Agre"
+          type="button"
+          value="Agregar"
+          id="contrasenia"
+        />
+        <input
+          class="btn_invt btn_Eli"
+          type="button"
+          value="Eliminar"
+          id="contrasenia"
+        />
+        <input
+          class="btn_invt"
+          type="button"
+          value="Actualizar"
+          id="contrasenia"
+        />
+      </div>
+    </div>
   </body>
 </html>

@@ -1,5 +1,7 @@
-$(document).ready(function(){
+import { on_session } from "./index.js";
 
+$(document).ready(function(){
+    $(".barra")[0].style.backgroundColor = "#000000"
     $.ajax({
         url:"http://localhost:8080/listarProducto",
         type: "GET",
@@ -11,9 +13,6 @@ $(document).ready(function(){
                 console.log(res2.prod_Nombre)
                 
             }); */
-
-            console.log(respuesta);
-
             respuesta.forEach(function(invt) {
 
                 tabla.innerHTML += '<tr><td>' 
