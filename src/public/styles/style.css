@@ -306,80 +306,25 @@ li a{
     width: auto;
 }
 
-/* añadir a carrito --------------------------------------------------------------*/
-  .nav-card li {
-    padding: 9px;
+/* Añadir CARRITO ------------------------------------------------------------*/
+
+.titCarrito th{
+    color: #609966; 
+}
+.offcanvas-header{
+    background-color: #60996605;
+}
+
+.offcanvas-header h5{
+    position: relative;
     font-weight: bold;
+    font-size: 25px;
+    font-family: 'Charm', cursive;
+    color:#609966;
 }
-/*Acomodar los elementos de nuestro carrito de compras*/
-.lista div {
-    display: none;
-    text-align: center;
-    padding: 10px 0 0 0;
-    border-top: solid thin gray;
-}
-
-.container .buy-card > .lista div {
-    display: flex;
-}
-
-.lista img {
-    width: 100px;
-}
-
-.lista p {
-    width: 300px;
-    font-size: 1.3rem;
-}
-
-.lista p:nth-child(4) {
-    padding-left: 40px;
-}
-
-.lista p:last-child span {
-    background-color: red;
-    border-radius: 50%;
-    padding: 5px 10px;
-    color: #fff;
-}
-
-
-.container .nav-card {
-    font-size: 16px;
-    display: flex;
-    border-bottom: solid thin #e1e1e1;
-}
-
-/*Acomodar elementos en carrito*/
-.contenedorCarrito {
-    display: none;
-    text-align: center;
-    padding: 10px 0 0 0;
-    border-top: solid thin gray;
-}
-
-.container  .buy-card > .contenedorCarrito  {
-    display: flex;
-}
-
-.contenedorCarrito img{
-    width: 100px;
-}
-
-.contenedorCarrito p {
-    width: 300px;
-    font-size: 1.3rem;
-}
-
-.contenedorCarrito :nth-child(4) {
-    padding-left: 40px;
-}
-
-.contenedorCarrito p:last-child span {
-    background-color: red;
-    border-radius: 50%;
-    padding: 5px 10px;
-    color: #fff;
+.offcanvas-header img{
+    width: 40px;
+    height: 40px;
 }
 
 
