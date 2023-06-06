@@ -7,18 +7,19 @@ $(document).ready((e) => {
     console.log(email + pass);
 
     if (email == "" || pass == "") {
-      alert("Debes completar todos los campos")
+      alert("Debes completar todos los campos");
     } else {
       $.ajax({
         url: "http://localhost:8080/validarUsuario/" + email + "/" + pass,
         type: "GET",
         datatype: "JSON",
         success: (res) => {
-          if (res != "Usuario o contraseña incorrectos") {
-              sessionStorage.setItem("status", res)
-              window.location.href = 'index.html'
+          if (res.error != "Usuario o contraseña incorrectos") {
+            sessionStorage.setItem("status", res.rol);
+            sessionStorage.setItem("user", res.res)
+            window.location.href = "index.html";
           } else {
-              alert(res)
+            console.log(res);
           }
         },
         error: (xhr, status, error) => {

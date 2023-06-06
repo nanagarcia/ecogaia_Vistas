@@ -1,24 +1,32 @@
 $(document).ready(() => {
     on_session()
-    console.log($("#cat")[0])
 })
 
 
 export const on_session = ()=> {
     var state = false;
     if (sessionStorage.getItem("status") != null) {
-        $("#op6")[0].innerHTML = buttons("./perfil.html", "inicio2", "user", "Perfil")
-        $("#op7")[0].innerHTML = buttons("./registrarse.html", "registro", "sign-out-alt", "Cerrar Sesion")
-        $("#op4")[0].style.display = "block"
-        $("#op5")[0].style.display = "block"
-        state = true;
+        console.log(sessionStorage.getItem("status"))
+        if (sessionStorage.getItem("status") == "usuario"){
+            $("#op8")[0].innerHTML = buttons("./perfil.html", "inicio2", "user", "Perfil")
+            $("#op9")[0].innerHTML = buttons("./index.html", "registro", "sign-out-alt", "Cerrar Sesion")
+            $("#op5")[0].style.display = "none"
+            $("#op6")[0].style.display = "none"
+            $("#op7")[0].style.display = "none"
+            state = true;
+        } else if (sessionStorage.getItem("status") == "admin") {
+            $("#op8")[0].innerHTML = buttons("./perfil.html", "inicio2", "user", "Perfil")
+            $("#op9")[0].innerHTML = buttons("./index.html", "registro", "sign-out-alt", "Cerrar Sesion")
+            $("#op4")[0].style.display = "block"
+            $("#op5")[0].style.display = "block"
+            state = true;
+        }
     } else {
         off_session()
     }
-    $("#op7").on("click", () => {
+    $("#op9").on("click", () => {
         off_session()
     })
-    console.log(state)
     return state
 }
 
@@ -33,6 +41,8 @@ export const off_session = () => {
     }
     $("#op4")[0].style.display = "none"
     $("#op5")[0].style.display = "none"
-    $("#op6")[0].innerHTML = buttons("./iniciosesion.html", "inicio2", "sign-out-alt", "Iniciar Sesion")
-    $("#op7")[0].innerHTML = buttons("./registrarse.html", "registro", "tasks", "Registrarse")
+    $("#op6")[0].style.display = "none"
+    $("#op7")[0].style.display = "none"
+    $("#op8")[0].innerHTML = buttons("./iniciosesion.html", "inicio2", "sign-out-alt", "Iniciar Sesion")
+    $("#op9")[0].innerHTML = buttons("./registrarse.html", "registro", "tasks", "Registrarse")
 }
