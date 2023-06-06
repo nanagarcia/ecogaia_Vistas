@@ -9,13 +9,31 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
+#body1{
     background-image: url(../assets/fondoinicio.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
     background-position:center;
 }
+
+
+#body2{
+    background-image: url(../assets/fondoNegro.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
+#body3{
+    background-image: url(../assets/fondogris.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position:center;
+}
+
 
 
 /* BARRA DE NAVEGACION ------------------------------------------------------*/
@@ -210,21 +228,14 @@ li a{
 .modal-body .iconos{
     width: 30px;
 }
-.modal-agregar{
-    display: flex;
-    justify-content: center;
-    
-}
+
 .fa-regular{
-    margin-left: 90%;
+    margin-top: 2px;
+    margin-left: 80%;
     font-size: 30px;
     color: #609966;
 }
-.fa{
-    margin-top: 5%;
-    font-size: 30px;
-    color: #609966; 
-}
+
 
 /* Categorias ---------------------------------------------------------------------*/
 
@@ -295,38 +306,27 @@ li a{
     width: auto;
 }
 
-/* añadir a carrito --------------------------------------------------------------*/
-.table{
-    min-height: 40vh;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
-  }
+/* Añadir CARRITO ------------------------------------------------------------*/
 
-  .table__imagen > img{
-    width: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-    margin-right: 20px;
-  }
-  .table__cantidad > input{
-    width: 40px;
-    margin-left: 25px;
-  }
-  .hide, .remove{
-    display: none;
-  }
-  h5{
-    margin-left: 25%;
-    font-family: 'Charm', cursive;
+.titCarrito th{
+    color: #609966; 
+}
+.offcanvas-header{
+    background-color: #60996605;
+}
+
+.offcanvas-header h5{
+    position: relative;
     font-weight: bold;
-    
-  }
-  .offcanvas-header{
-    margin-top: 5%;
+    font-size: 25px;
+    font-family: 'Charm', cursive;
     color:#609966;
-    
-  }
+}
+.offcanvas-header img{
+    width: 40px;
+    height: 40px;
+}
+
 
 /*Estadisticas ------------------------------------------------------------------*/
 .estadisticas{
@@ -392,15 +392,54 @@ h3{
 /* Inventario empresa ---------------------------------------------------------- */
 
 .inventarioEco{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 10%;
     margin-right: 5%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulos{
     background-color: #609966;
+    color: aliceblue;   
+}
+
+#tabla{
+    border: rgba(240, 248, 255, 0.075) 2px solid;
+    background-color: #121212e1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#tabla td{
     color: aliceblue;
+    height: 60px;
+    border-right: rgba(240, 248, 255, 0.075) 2px solid;
+}
+
+.titulo_invt{
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 4%;
+
+}
+
+/* botones inventario */
+
+
+.btn_invt{
+    background-color: #609966;
+    color: aliceblue;
+    border-radius: 4px;
+    padding: 7px;
+    margin-right: 20px;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    
 }
 
 
@@ -593,6 +632,7 @@ input{
 	font-size: 18px;
 	transition: .3s;
 }
+
 /*formularios ----------------------------------------------------------------------*/
 
 .login-contenedor{
@@ -722,7 +762,7 @@ form h2{
 	margin-bottom: 4px;
 }
 
-.btn{
+.btnForms{
 	display: block;
 	width: 100%;
 	height: 50px;
@@ -739,6 +779,7 @@ form h2{
 	cursor: pointer;
 	transition: .5s;
 }
+
 .btn:hover{
 	background-position: right;
 }
@@ -903,6 +944,16 @@ span{
     background-color: #121212;
 }
 
+.contenedorIn{
+    margin-left: 62%;
+    margin-top: 3%;
+}
+
+.login-contenedor{
+    margin-top: 2%;
+    margin-left: 60%;
+}
+
 /* blog_insertar -----------------------------------------------------------------*/
 
 .cancelar img{
@@ -1000,5 +1051,5 @@ footer{
 
 .info_productos .texto{
     margin-left: 40px;
-
 }
+

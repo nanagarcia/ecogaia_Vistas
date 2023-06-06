@@ -5,23 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecogaia</title>
-    <!-- CSS-->
+    <!--css link-------------->
     <link rel="stylesheet" href="../public/styles/style.css" />
-    <!-- Tipos de letras -->
+    <!--link ajax-------------->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!--fonts-------------->
     <link
       href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Tangerine:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- JS -->
-    <script type="module" src="../scripts/index.js"></script>
+    <!-- CSS bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -39,16 +35,27 @@
       crossorigin="anonymous"
     ></script>
     <script src="../scripts/carrito.js"></script>
-    <!-- Icono -->
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- JS -->
+    <script type="module" src="../scripts/actualizar_usuario.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!--icono-------------->
     <link
       rel="shortcut icon"
       href="../public/assets/hoja.png"
       type="image/x-icon"
     />
   </head>
-
   <body id="body3">
-
+    <!--barra navegacion-------------->
     <nav class="barra">
       <li id="">
         <a href="#" class="logo">
@@ -153,54 +160,103 @@
         </a>
       </li>
     </nav>
-    <!-- <img src="../public/assets/fondogris.png" class="wave" alt="" /> -->
 
-      <!-- <div class="Telefono">
+    <!--logotipo-------------->
+    <!-- <div class="Telefono">
         <img src="../public/assets/logosecundario.png" alt="" />
       </div> -->
 
-      <div class="login-contenedor">
-        <form action="">
-          <img src="../public/assets/fotoPerfil.png" class="avatar" alt="" />
+    <!--actualizar datos-------------->
 
-          <h2>Blog</h2>
-
-          <div class="input-div">
-            <div class="i">
-              <i class="fas fa-user"></i>
-            </div>
-
-            <div>
-              <h5>Nombre de usuario</h5>
-              <input class="inputIn" type="text" />
-            </div>
+    <div class="login-contenedor">
+      <form action="">
+        <h2>Actualizar</h2>
+        <div class="input-div">
+          <div class="i">
+            <i class="fas fa-user"></i>
           </div>
-
-          <div class="input-div">
-            <div class="i">
-              <i class="fas fa-user"></i>
-            </div>
-
-            <div>
-              <h5>Titulo</h5>
-              <input class="inputIn" type="text" />
-            </div>
+          <div>
+            <input
+              class="inputIn"
+              type="text"
+              id="nombre"
+              placeholder="Nombre Completo"
+            />
           </div>
-
-          <div class="textarea">
-            <h1>Contenido</h1>
-
-            <textarea
-              class="contenido_blog"
-              name=""
-              id=""
-              cols="35"
-              rows="4"
-            ></textarea>
+        </div>
+        <div class="input-div">
+          <div class="i">
+            <i class="fas fa-envelope"></i>
           </div>
-
-          <input type="submit" class="btnForms" value="Publicar" />
-        </form>
-      </div>
+          <div>
+            <input
+              class="inputIn"
+              type="text"
+              placeholder="Correo"
+              id="correo"
+            />
+          </div>
+        </div>
+        <div class="input-div">
+          <div class="i">
+            <i class="fas fa-tent"></i>
+          </div>
+          <div>
+            <input
+              class="inputIn"
+              type="text"
+              placeholder="Direccion"
+              id="direccion"
+            />
+          </div>
+        </div>
+        <div class="input-div">
+          <div class="i">
+            <i class="fas fa-unlock"></i>
+          </div>
+          <div>
+            <input
+              class="inputIn"
+              type="password"
+              placeholder="Contraseña"
+              id="contrasenia"
+            />
+          </div>
+        </div>
+        <div class="input-div">
+          <div class="i">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div>
+            <input
+              class="inputIn"
+              type="password"
+              placeholder="Confirmar Contraseña"
+              id="con_contrasenia"
+            />
+          </div>
+        </div>
+        <div class="input-div">
+          <div class="i">
+            <i class="fas fa-phone-flip"></i>
+          </div>
+          <div>
+            <input
+              class="inputIn"
+              type="text"
+              placeholder="Telefono"
+              id="telefono"
+            />
+          </div>
+        </div>
+        <!--boton-------------->
+        <input
+          id="actualizar"
+          type="button"
+          class="btnForms"
+          value="Actualizar"
+        />
+      </form>
+    </div>
   </body>
 </html>
