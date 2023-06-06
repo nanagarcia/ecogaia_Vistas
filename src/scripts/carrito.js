@@ -5,7 +5,6 @@ $(document).ready(function(){
     type: "GET",
     dataType: "JSON",
     success: function(res){
-      console.log(res)
       if (res.length > 0) {
         res.forEach((cotiza) => {
           tablaCarrito.innerHTML += '<tr><td>'

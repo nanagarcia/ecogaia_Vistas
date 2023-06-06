@@ -5,8 +5,8 @@ $(document).ready(() => {
 
 export const on_session = ()=> {
     var state = false;
+    console.log(sessionStorage.getItem("status"))
     if (sessionStorage.getItem("status") != null) {
-        console.log(sessionStorage.getItem("status"))
         if (sessionStorage.getItem("status") == "usuario"){
             $("#op8")[0].innerHTML = buttons("./perfil.html", "inicio2", "user", "Perfil")
             $("#op9")[0].innerHTML = buttons("./index.html", "registro", "sign-out-alt", "Cerrar Sesion")
@@ -20,6 +20,12 @@ export const on_session = ()=> {
             $("#op4")[0].style.display = "block"
             $("#op5")[0].style.display = "block"
             state = true;
+        } else if (sessionStorage.getItem("status") == "repartidor") {
+            $("#op8")[0].innerHTML = buttons("./perfil.html", "inicio2", "user", "Perfil")
+            $("#op9")[0].innerHTML = buttons("./index.html", "registro", "sign-out-alt", "Cerrar Sesion")
+            $("#op4")[0].style.display = "block"
+            $("#op5")[0].style.display = "none"
+            $("#op6")[0].style.display = "none"
         }
     } else {
         off_session()
