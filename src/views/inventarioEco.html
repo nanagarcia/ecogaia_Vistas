@@ -40,6 +40,7 @@
     />
     <title>Ecogaia</title>
     <script type="module" src="../scripts/inventario.js"></script>
+    <script src="../scripts/unmodule.js"></script>
     <link
       rel="shortcut icon"
       href="../public/assets/hoja.png"
@@ -134,7 +135,7 @@
       </li>
 
       <li id="op7">
-        <a href="./inventarioEco.html" id="inventario">
+        <a href="./repartidor.html" id="inventario">
           <i class="fas fa-folder-open"></i>
           <span class="nav-item">Repartidor</span>
         </a>
@@ -158,7 +159,7 @@
     <!-- Inventario -->
 
     <div class="inventarioEco">
-      <h2 class="titulo_invt">Inventario Ecogaia</h2>
+      <img class="logoivt" src="../public/assets/logosecundario.png" alt="">
 
       <table class="table table-hover text-center" id="tabla">
         <thead>
@@ -180,7 +181,7 @@
           class="btn_invt btn_Agre"
           type="button"
           value="Agregar"
-          id="contrasenia"
+          id="btn_add_prod"
         />
         <input
           class="btn_invt btn_Eli"
@@ -194,6 +195,9 @@
           value="Actualizar"
           id="contrasenia"
         />
+
+        <div class="formaddprodu" id="formaddprodu">
+        </div>
       </div>
     </div>
   </body>

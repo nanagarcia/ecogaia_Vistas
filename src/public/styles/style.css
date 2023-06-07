@@ -242,65 +242,51 @@ li a{
 .categorias{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-}
-
-.card{
-    width: 270px;
-    height: 250px;
-    border-radius: none;
-    background: var(--i);
-    background-size: cover;
-    box-shadow: 4px 5px 5px #67866394;
-}
-
-.content2{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #000000a9;
-    opacity: 0;
-    transition: .6s;
 }
 
-.content2 h2{
-    color: white;
-} 
-
-#ver_mas{
-    text-decoration: none;
+.categoria{
+    width: 90px;
+    height: 90px;
+    background-color: #609966;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: 22px;
-    color: #678663;
-}
-
-.card:hover .content2{
-    opacity: 1;
-}
-
-/* Añadir blog -----------------------------------------------------------------*/
-.insertar_blog{
-    float: left;
-    z-index: 3;
-    margin-left: auto;
-}
-.insertar_blog img{
-    width: 50px;
-    margin-bottom: 30px;
-}
-
-.insertar_blog img:hover{
-    width: 55px;
+    align-items: center;
+    box-shadow: 9px 8px 19px -3px rgba(96,153,102,1);
     
 }
 
-#a_botonMas{
+
+
+.categoria img{
+    width: 70%;
+}
+
+.categoria button{
+    background-color: #609966;
+}
+
+
+/* Añadir blog -----------------------------------------------------------------*/
+
+.insertar_blog img{
+    width: 60px;
+    position: fixed;
+    float: right;
+    z-index: 1;
+    bottom: 80px;
+    right: 50px;
+    transition: transform 0.3s ease;
+}
+
+.insertar_blog img:hover{
+    transform: scale(1.2);
+}
+
+#btn_add_blog{
     padding: 0%;
     margin: 0%;
     width: auto;
@@ -426,6 +412,11 @@ h3{
     text-align: center;
     margin-bottom: 4%;
 
+}
+
+.logoivt{
+    width: 25%;
+    margin-bottom: 20px;
 }
 
 /* botones inventario */
