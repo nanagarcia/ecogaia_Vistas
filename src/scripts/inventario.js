@@ -2,17 +2,15 @@ import { on_session } from "./index.js";
 
 $(document).ready(function(){
     $(".barra")[0].style.backgroundColor = "#000000"
+    if (sessionStorage.getItem("status") == "repartidor") {
+        $("#buttons")[0].style.display = "none"
+    }
+
     $.ajax({
         url:"http://localhost:8080/listarProducto",
         type: "GET",
         dataType: "JSON",
         success: function(respuesta){
-    
-            /* respuesta.forEach(function(res2){
-    
-                console.log(res2.prod_Nombre)
-                
-            }); */
             respuesta.forEach(function(invt) {
 
                 tabla.innerHTML += '<tr><td>' 

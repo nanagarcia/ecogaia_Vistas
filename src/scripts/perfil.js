@@ -9,7 +9,6 @@ $(document).ready((e) => {
         type: "GET",
         datatype: "JSON",
         success: (res) => {
-            console.log(res)
             if (res.usu_nombre.length > 20) {
                 $("#userName")[0].innerHTML = res.usu_nombre.slice(0,15) + " ..."
             } else {
