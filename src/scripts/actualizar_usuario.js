@@ -8,13 +8,11 @@ $(document).ready((e) => {
   var correo = $("#correo");
   var contrasenia = $("#contrasenia");
   var rol = "";
-  console.log(val)
   $.ajax({
     url: "http://localhost:8080/usuario/" + val,
     type: "GET",
     datatype: "JSON",
     success: (res) => {
-      console.log(res)
       nombre.val(res.usu_nombre);
       telefono.val(res.usu_telefono);
       direccion.val(res.usu_direccion);

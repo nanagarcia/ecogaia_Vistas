@@ -4,24 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecogaia</title>
-    <!-- CSS-->
+    <!--css link-------------->
     <link rel="stylesheet" href="../public/styles/style.css" />
-    <!-- Tipos de letras -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Tangerine:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- JS -->
-    <script type="module" src="../scripts/index.js"></script>
+    <!-- CSS bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
@@ -39,18 +24,32 @@
       crossorigin="anonymous"
     ></script>
     <script src="../scripts/carrito.js"></script>
-
-    <script type="module" src="../scripts/blog.js"></script>
-    <!-- Icono -->
+    <!--link ajax-------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--fonts-------------->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ecogaia</title>
+    <script type="module" src="../scripts/repartidor.js"></script>
     <link
       rel="shortcut icon"
       href="../public/assets/hoja.png"
       type="image/x-icon"
     />
   </head>
+  <body id="body2">
+    <!--barra navegacion-------------->
 
-  <body id="body3">
-
+    <!-- barra -->
     <nav class="barra">
       <li id="">
         <a href="#" class="logo">
@@ -135,7 +134,7 @@
       </li>
 
       <li id="op7">
-        <a href="./inventarioEco.html" id="inventario">
+        <a href="./repartidor.html" id="inventario">
           <i class="fas fa-folder-open"></i>
           <span class="nav-item">Repartidor</span>
         </a>
@@ -155,44 +154,27 @@
         </a>
       </li>
     </nav>
-    <!-- <img src="../public/assets/fondogris.png" class="wave" alt="" /> -->
 
-      <!-- <div class="Telefono">
-        <img src="../public/assets/logosecundario.png" alt="" />
-      </div> -->
+    <!-- Inventario -->
 
-      <div class="login-contenedor">
-        <form id="insert_blog" action="">
-          <img src="../public/assets/fotoPerfil.png" class="avatar" alt="" />
+    <div class="inventarioEco">
+      <img class="logoivt" src="../public/assets/logosecundario.png" alt="">
 
-          <h2>Blog</h2>
+      <table class="table table-hover text-center" id="tabla">
+        <thead>
+          <tr class="titulos">
+            <th scope="col">Codigo venta</th>
+            <th scope="col">Codigo usuario</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Producto</th>
+          </tr>
+        </thead>
+      </table>
 
-          <div class="input-div">
-            <div class="i">
-              <i class="fas fa-user"></i>
-            </div>
 
-
-            <div>
-              <h5>Titulo</h5>
-              <input id="title_blog" class="inputIn" type="text" />
-            </div>
-          </div>
-
-          <div class="textarea">
-            <h1>Contenido</h1>
-
-            <textarea
-              class="contenido_blog"
-              name=""
-              id="content_blog"
-              cols="35"
-              rows="4"
-            ></textarea>
-          </div>
-
-          <input id="send_tip" type="button" class="btnForms" value="Publicar" />
-        </form>
-      </div>
+    
+    </div>
   </body>
 </html>

@@ -20,7 +20,7 @@ $(document).ready((e) => {
             data: user,
             dataType: "text",
             success: (res) => {
-              console.log(res);
+              
             },
           });
     }
