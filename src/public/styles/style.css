@@ -242,47 +242,33 @@ li a{
 .categorias{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-}
-
-.card{
-    width: 270px;
-    height: 250px;
-    border-radius: none;
-    background: var(--i);
-    background-size: cover;
-    box-shadow: 4px 5px 5px #67866394;
-}
-
-.content2{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #000000a9;
-    opacity: 0;
-    transition: .6s;
 }
 
-.content2 h2{
-    color: white;
-} 
-
-#ver_mas{
-    text-decoration: none;
+.categoria{
+    width: 90px;
+    height: 90px;
+    background-color: #609966;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-size: 22px;
-    color: #678663;
+    align-items: center;
+    box-shadow: 9px 8px 19px -3px rgba(96,153,102,1);
+    
 }
 
-.card:hover .content2{
-    opacity: 1;
+
+
+.categoria img{
+    width: 70%;
 }
+
+.categoria button{
+    background-color: #609966;
+}
+
 
 /* Añadir blog -----------------------------------------------------------------*/
 .insertar_blog{
@@ -426,6 +412,11 @@ h3{
     text-align: center;
     margin-bottom: 4%;
 
+}
+
+.logoivt{
+    width: 25%;
+    margin-bottom: 20px;
 }
 
 /* botones inventario */
