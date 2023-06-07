@@ -2,11 +2,22 @@
 
 <!-- Modal --><div  class='modal fade w-25'  id='exampleModal'  tabindex='-1'  aria-labelledby='exampleModalLabel'  aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header'><h1 class='modal-title fs-5 text-success'id='exampleModalLabel'>Mas información</h1><button type='button'class='btn-close'data-bs-dismiss='modal'aria-label='Close'></button></div><div class='modal-body'><i class='fa-regular fa-star'></i><img class='producto_img'src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png'alt=''/><p class='precio'>+producto.prod_Categoria+</p><h1 class='text-success'>+producto.prod_Nombre+</h1><p class='contenido '></p><button type='button' class='btn btn-success'>Agregar a Carrito</button></div></div></div></div></div></div>
 
-<form action="">
-    <input type="text" placeholder="cantidad">
-    <input type="text" placeholder="imagen">
-    <input type="text" placeholder="nombre producto">
-    <input type="text" placeholder="precio">
+<form action=''>
+    <input type='text' placeholder='cantidad'>
+    <input type='text' placeholder='imagen'>
+    <input type='text' placeholder='nombre producto'>
+    <input type='text' placeholder='precio'>
     
     
 </form>
+
+var inoots = "'<tr><button id="pass"></button><td><input type='text' id="prod_Nombre" placeholder='nombre producto'></td><td>'"
+    "'<tr><td><input type='text' id="prod_Imagen" placeholder='imagen producto'></td><td>'"
+        "'<tr><td><input type='text' id="prod_Categoria" placeholder='Categoria producto'></td><td>'"
+            "'<tr><td><input type='text' id="prod_Precio" placeholder='precio producto'></td><td>'"
+
+
+    + invt.prod_Imagen + '</td><td>'
+    + invt.prod_Categoria + '</td><td>'
+    + invt.prod_Cantidad + '</td><td>'
+    + invt.prod_Precio + '</td>'"

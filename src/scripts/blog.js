@@ -92,8 +92,18 @@ $(document).ready((e) => {
       data: blog,
       dataType: "text",
       success: (res) => {
+        if(res != "No se agrego el tip"){
+          alert(res)
+          window.location.href = "/src/views/Blog.html"
+        }else{
+          alert(res)
+        }
         console.log(res);
       },
+      error:(xhr,status,error)=>{
+        console.log(error)
+        console.log(xhr.responseText)
+      }
     });
   
   }
