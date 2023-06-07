@@ -28,4 +28,20 @@ $(document).ready(function(){
     
         }
     })
+
+    $("#btn_add_prod").on ("click",() =>{
+        $.ajax({
+            url: "http://localhost:8080/insertarProducto",
+            type: "GET",
+            datatype: "JSON",
+            success: (res) => {
+              res.forEach((producto) => {
+                inventarioEco.innerHTML += " "
+                })
+  
+            },
+          });
+        })
+
+    
 })

@@ -39,6 +39,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="../scripts/carrito.js"></script>
+
+    <script type="module" src="../scripts/blog.js"></script>
     <!-- Icono -->
     <link
       rel="shortcut icon"
@@ -160,7 +162,7 @@
       </div> -->
 
       <div class="login-contenedor">
-        <form action="">
+        <form id="insert_blog" action="">
           <img src="../public/assets/fotoPerfil.png" class="avatar" alt="" />
 
           <h2>Blog</h2>
@@ -170,20 +172,10 @@
               <i class="fas fa-user"></i>
             </div>
 
-            <div>
-              <h5>Nombre de usuario</h5>
-              <input class="inputIn" type="text" />
-            </div>
-          </div>
-
-          <div class="input-div">
-            <div class="i">
-              <i class="fas fa-user"></i>
-            </div>
 
             <div>
               <h5>Titulo</h5>
-              <input class="inputIn" type="text" />
+              <input id="title_blog" class="inputIn" type="text" />
             </div>
           </div>
 
@@ -193,13 +185,13 @@
             <textarea
               class="contenido_blog"
               name=""
-              id=""
+              id="content_blog"
               cols="35"
               rows="4"
             ></textarea>
           </div>
 
-          <input type="submit" class="btnForms" value="Publicar" />
+          <input id="send_tip" type="button" class="btnForms" value="Publicar" />
         </form>
       </div>
   </body>

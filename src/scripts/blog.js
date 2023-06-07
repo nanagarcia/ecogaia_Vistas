@@ -4,7 +4,9 @@ $(document).ready((e) => {
   if(!on_session()) {
     $(".insertar_blog")[0].style.display = "none"
   }
-  const container = document.getElementById("container")
+  
+  if(window.location.pathname == "/src/views/Blog.html"){
+    const container = document.getElementById("container")
   const listar = ()=> {
     $.ajax({
       url: "http://localhost:8080/listarTip",
@@ -69,4 +71,38 @@ $(document).ready((e) => {
       })
     }
   })
-});
+}
+  
+  
+  $('#send_tip').on("click", () =>{
+    const val = sessionStorage.getItem("user")
+    console.log(val)
+    const blog = {
+      usuario: "",
+      titulo: $("#title_blog").val(),
+      cuerpo: $("#content_blog").val(),
+    };
+    if (blog.titulo == "" || blog.content == "") {
+      alert("Completar todos los campos")
+  } else {
+
+    $.ajax({
+      url: "http://localhost:8080/insertarTip/"+val,
+      type: "POST",
+      data: blog,
+      dataType: "text",
+      success: (res) => {
+        console.log(res);
+      },
+    });
+  
+  }
+  })
+})  
+
+
+
+
+
+
+

@@ -285,22 +285,22 @@ li a{
 }
 
 /* Añadir blog -----------------------------------------------------------------*/
-.insertar_blog{
-    float: left;
-    z-index: 3;
-    margin-left: auto;
-}
+
 .insertar_blog img{
-    width: 50px;
-    margin-bottom: 30px;
+    width: 60px;
+    position: fixed;
+    float: right;
+    z-index: 1;
+    bottom: 80px;
+    right: 50px;
+    transition: transform 0.3s ease;
 }
 
 .insertar_blog img:hover{
-    width: 55px;
-    
+    transform: scale(1.2);
 }
 
-#a_botonMas{
+#btn_add_blog{
     padding: 0%;
     margin: 0%;
     width: auto;
