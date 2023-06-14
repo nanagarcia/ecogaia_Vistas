@@ -23,7 +23,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/carrito.js"></script>
     <!--link ajax-------------->
     <link
       rel="stylesheet"
@@ -40,6 +39,7 @@
     />
     <title>Ecogaia</title>
     <script type="module" src="../scripts/repartidor.js"></script>
+    <script src="../scripts/unmodule.js"></script>
     <link
       rel="shortcut icon"
       href="../public/assets/hoja.png"
@@ -54,7 +54,7 @@
       <li id="">
         <a href="#" class="logo">
           <img src="../public/assets/hoja.png" alt="" />
-          <span class="nav-item-nombre">Ecogaia</span>
+          <span class="nav-item-nombre ">Ecogaia</span>
         </a>
       </li>
 
@@ -85,6 +85,7 @@
           href="#offcanvasExample"
           role="button"
           aria-controls="offcanvasExample"
+          
         >
           <i class="fas fa-cart-shopping"></i>
           <span class="nav-item">Carrito</span>
@@ -97,7 +98,9 @@
         >
           <div class="offcanvas-header">
             <img src="../public/assets/hoja.png" alt="" />
-            <h5 class="tituloCarrito" id="offcanvasExampleLabel">CARRITO</h5>
+            <h5 class="tituloCarrito" id="offcanvasExampleLabel">
+              CARRITO
+            </h5>
             <button
               type="button"
               class="btn-close text-reset"
@@ -106,16 +109,24 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <table class="table table-hover" id="tablaCarrito">
+            <table class="table table-hover">
               <thead>
                 <tr class="titCarrito">
                   <th scope="col">Codigo</th>
                   <th scope="col">Producto</th>
                   <th scope="col">Cantidad</th>
                   <th scope="col">Total</th>
+                  <th scope="col"><i class="fas fa-trash"></i></th>
                 </tr>
               </thead>
+              <tbody id="tablaCarrito"></tbody>
             </table>
+            <button
+            type="button"
+            class="btn btn-success mb-2"
+          >
+            Comprar
+          </button>
           </div>
         </div>
       </li>
@@ -172,9 +183,18 @@
           </tr>
         </thead>
       </table>
+<<<<<<< HEAD
 
+      <div class="boton-switch">
 
-    
+        <input type="checkbox" name="" id="btn-switch">
+        <label for="btn-switch" class="lbl-switch" id="lbl-btn"></label>
+
+      </div>
+
+=======
+>>>>>>> 1e122b8a8dc1d9c07b1744767a0e6bd7dedc8493
     </div>
+    <script src="../scripts/carrito.js"></script>
   </body>
 </html>

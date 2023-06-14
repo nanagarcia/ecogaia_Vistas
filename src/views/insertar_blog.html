@@ -38,9 +38,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/carrito.js"></script>
-
     <script type="module" src="../scripts/blog.js"></script>
+    <script src="../scripts/unmodule.js"></script>
     <!-- Icono -->
     <link
       rel="shortcut icon"
@@ -50,12 +49,11 @@
   </head>
 
   <body id="body3">
-
     <nav class="barra">
       <li id="">
         <a href="#" class="logo">
           <img src="../public/assets/hoja.png" alt="" />
-          <span class="nav-item-nombre">Ecogaia</span>
+          <span class="nav-item-nombre ">Ecogaia</span>
         </a>
       </li>
 
@@ -86,6 +84,7 @@
           href="#offcanvasExample"
           role="button"
           aria-controls="offcanvasExample"
+          
         >
           <i class="fas fa-cart-shopping"></i>
           <span class="nav-item">Carrito</span>
@@ -98,7 +97,9 @@
         >
           <div class="offcanvas-header">
             <img src="../public/assets/hoja.png" alt="" />
-            <h5 class="tituloCarrito" id="offcanvasExampleLabel">CARRITO</h5>
+            <h5 class="tituloCarrito" id="offcanvasExampleLabel">
+              CARRITO
+            </h5>
             <button
               type="button"
               class="btn-close text-reset"
@@ -107,16 +108,24 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <table class="table table-hover" id="tablaCarrito">
+            <table class="table table-hover">
               <thead>
                 <tr class="titCarrito">
                   <th scope="col">Codigo</th>
                   <th scope="col">Producto</th>
                   <th scope="col">Cantidad</th>
                   <th scope="col">Total</th>
+                  <th scope="col"><i class="fas fa-trash"></i></th>
                 </tr>
               </thead>
+              <tbody id="tablaCarrito"></tbody>
             </table>
+            <button
+            type="button"
+            class="btn btn-success mb-2"
+          >
+            Comprar
+          </button>
           </div>
         </div>
       </li>
@@ -191,8 +200,25 @@
             ></textarea>
           </div>
 
-          <input id="send_tip" type="button" class="btnForms" value="Publicar" />
+          <!-- boton -->
+
+          <button type="button" class="btnForms" id="send_tip">
+            
+            <div class="blog_ico">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+
+            </div>
+
+            <span>Insertar</span>
+          
+          </button>
+
+      
         </form>
       </div>
+      <script src="../scripts/carrito.js"></script>
   </body>
 </html>

@@ -35,7 +35,7 @@
       <li id="">
         <a href="#" class="logo">
           <img src="../public/assets/hoja.png" alt="" />
-          <span class="nav-item-nombre">Ecogaia</span>
+          <span class="nav-item-nombre ">Ecogaia</span>
         </a>
       </li>
 
@@ -61,10 +61,55 @@
       </li>
 
       <li id="op4">
-        <a id="" href="#">
+        <a
+          data-bs-toggle="offcanvas"
+          href="#offcanvasExample"
+          role="button"
+          aria-controls="offcanvasExample"
+          
+        >
           <i class="fas fa-cart-shopping"></i>
           <span class="nav-item">Carrito</span>
         </a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <img src="../public/assets/hoja.png" alt="" />
+            <h5 class="tituloCarrito" id="offcanvasExampleLabel">
+              CARRITO
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <table class="table table-hover">
+              <thead>
+                <tr class="titCarrito">
+                  <th scope="col">Codigo</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Total</th>
+                  <th scope="col"><i class="fas fa-trash"></i></th>
+                </tr>
+              </thead>
+              <tbody id="tablaCarrito"></tbody>
+            </table>
+            <button
+            type="button"
+            class="btn btn-success mb-2"
+          >
+            Comprar
+          </button>
+          </div>
+        </div>
       </li>
       <li id="op5">
         <a href="./inventarioEco.html" id="inventario">
@@ -74,7 +119,7 @@
       </li>
 
       <li id="op6">
-        <a href="./estadisticas.html" >
+        <a href="./estadisticas.html">
           <i class="fas fa-ranking-star"></i>
           <span class="nav-item">Estadisticas</span>
         </a>
@@ -159,7 +204,7 @@
           </div>
           <div class="input-div">
             <div class="i">
-              <i class="fas fa-phone-flip"></i>
+              <i class="fas fa-phone"></i>
             </div>
             <div>
               <h5>Ingrese su Telefono</h5>
@@ -168,9 +213,9 @@
           </div>
           <!--boton-------------->
           
-          <button class="btnForms" id="sign_in">
+          <button type="button" class="btnForms" id="sign_in">
             
-            <div class="icono">
+            <div class="registro_ico">
 
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>

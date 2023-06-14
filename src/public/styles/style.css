@@ -245,6 +245,11 @@ li a{
     color: #609966;
 }
 
+.fa {
+    font-size: 20px;
+    margin-left: 25%;
+}
+
 
 /* Categorias ---------------------------------------------------------------------*/
 
@@ -269,7 +274,6 @@ li a{
     margin-inline: 2%;
     transition: all 0.5s ease;
 }
-
 
 .categoria:hover{
     transform: scaleY(0.9)
@@ -478,16 +482,48 @@ h3{
 
 /* botones inventario */
 
+.btn_crud{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .btn_invt{
-    background-color: #609966;
-    color: aliceblue;
-    border-radius: 4px;
-    padding: 7px;
-    margin-right: 20px;
-    margin-bottom: 10%;
-    margin-top: 5%;
-    
+    display: inline-flex;
+    width: 12%;
+    height: 40px;
+    margin: 20px 0 40px 0;
+    margin-inline: 2%;
+    align-items: center;
+    justify-content: center;
+    background: #609966;
+    color: #fff;
+    transition: .3s ease all;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.btn_invt::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: relative;
+    z-index: 0;
+    transition: .8s ease-in-out all;
+    border-radius: 100px;
+    transform-origin: center;
+}
+
+.btn_invt:hover span{
+    color: #609966;
+    z-index: 1;
+}
+
+.btn_invt:hover::after{
+    transform: scale(400);
+    background: #fff;
 }
 
 
@@ -575,6 +611,11 @@ input{
     background-color: white;
     margin: 20px;
     border-radius: 10px;
+<<<<<<< HEAD
+    height: 520px;
+    transition: all 0.9s;
+    border: #07070718 2px solid;
+=======
     height: 580px;
     box-shadow: 5px 5px 15px #609966;
 }
@@ -586,7 +627,14 @@ input{
     border-radius: 10px;
     height: 420px;
     box-shadow: 5px 5px 15px #609966;
+>>>>>>> 1e122b8a8dc1d9c07b1744767a0e6bd7dedc8493
 }
+
+.blog-box:hover{
+    transform: translateY(-15px);
+    box-shadow: -1px 7px 25px -3px rgba(96,153,102,0.98);
+}
+
 .blog-text{
     display: flex;
     flex-direction: column;
@@ -863,19 +911,19 @@ form h2{
 
 
 .btnForms span{
-    transition: .4s;
+    transition: .4s ease-in-out all;
     position: absolute;
-    left: 76%;
     display: flex; 
     justify-content: center; 
     align-items: center;
+    
 }
 
-.btnForms:hover span{
-    left: 67%
+.btnForms:hover span {
+    margin: 0 15% 0 0;
 }
 
-.btnForms .icono{
+.btnForms .ini_ico{
     display: flex;
     position: absolute;
     z-index: 1;
@@ -883,16 +931,52 @@ form h2{
     transition: .3s ease-in-out all;
 }
 
-.btnForms .icono svg{
+.btnForms svg{
     color: #fff;
     width: 30px;
     height: 30px;
 }
 
-.btnForms:hover .icono{
-    left:  calc(87% );
+.btnForms:hover .ini_ico{
+    left:  calc(89%);
 }
 
+
+.btnForms .registro_ico{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 64%;
+    transition: .3s ease-in-out all;
+}
+
+.btnForms:hover .registro_ico{
+    left:  calc(89%);
+}
+
+.btnForms .actu_ico{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 64%;
+    transition: .3s ease-in-out all;
+}
+
+.btnForms:hover .actu_ico{
+    left:  calc(89%);
+}
+
+.btnForms .blog_ico{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 64%;
+    transition: .3s ease-in-out all;
+}
+
+.btnForms:hover .blog_ico{
+    left:  calc(89%);
+}
 
 
 /*perfil --------------------------------------------------------------------------*/
@@ -1060,7 +1144,7 @@ form h2{
 
 .login-contenedor{
     margin-top: 2%;
-    margin-left: 60%;
+    margin-left: 62%;
 }
 
 /* blog_insertar -----------------------------------------------------------------*/
@@ -1069,6 +1153,44 @@ form h2{
     width: 10px;
 }
 
+/* boton switch */
+
+
+.lbl-switch{
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+#btn-switch:checked~ .lbl-switch{
+    background: #609966;
+}
+
+
+.lbl-switch:after{
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #aaa;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;
+    transition: 0.3s;
+}
+
+#btn-switch:checked~ .lbl-switch:after{
+    left: 28px;
+    background: #fff;
+}
+
+#btn-switch{
+    display: none;
+}
 
 /* FOOTER -----------------------------------------------------------------------*/
 footer{
