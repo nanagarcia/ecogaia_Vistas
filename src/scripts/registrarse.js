@@ -11,7 +11,9 @@ $(document).ready((e) => {
       usu_correo: $("#correo").val(),
       usu_contrasenia: $("#contrasenia").val(),
     };
+    
     if (user.usu_nombre == "" || user.usu_telefono == "" || user.usu_direccion == "" || user.usu_correo == "" || user.usu_contrasenia == "") {
+
         alert("Completar todos los campos")
     } else {
         $.ajax({
