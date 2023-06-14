@@ -522,6 +522,10 @@ input{
     
 }
 .blogN{
+<<<<<<< HEAD
+    margin-top: 2%;
+=======
+>>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
     display: flex;
     justify-content: center;
     align-items: center;
@@ -532,8 +536,9 @@ input{
 }
 .blogN h3{
     color: #609966;
-    font-size: 40px;
-    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: 'Charm', cursive;
 }
 
 .blog-heading h3{
@@ -569,7 +574,16 @@ input{
     background-color: white;
     margin: 20px;
     border-radius: 10px;
-    height: 520px;
+    height: 580px;
+    box-shadow: 5px 5px 15px #609966;
+}
+
+.blog-box2{
+    width: 340px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    height: 420px;
     box-shadow: 5px 5px 15px #609966;
 }
 .blog-text{
@@ -605,6 +619,7 @@ input{
     transition: all ease 0.3s;
 }
 .blog-text p{
+    
     color: #A4B494;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -624,18 +639,20 @@ input{
 .blog-text h2{
     color: #609966;
     display: -webkit-box;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-family: 'Charm', cursive;
     margin-top: 6%;
 }
 .blog-text2 h2{
     color: #609966;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Charm', cursive;
     display: -webkit-box;
     margin-top: 6%;
 }
 .blog-textN h2{
     color: #609966;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-family: 'Charm', cursive;
     display: -webkit-box;
     margin-top: 2%;
     margin-left: 35%;
@@ -643,7 +660,8 @@ input{
 .blog h3{
     color: #609966;
     font-size: 40px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Charm', cursive;
+    font-weight: bold;
 }
 .blog-heading{
     color: white;
@@ -1144,4 +1162,47 @@ footer{
     margin-left: 40px;
 }
 
+<<<<<<< HEAD
+@media screen and (min-width:320px) and (max-width:620px){
+    /*blog/nosotros---------------------------------------------------------*/
+    .barra{
+        display: none;
+    }
+    .box{
+        margin-top: 5%;
+        margin-left: 15%;
+        width: 280px;
+        height: 35px;
+    }
+    .blog{
+        margin-left: 15%;
+    }
+    .blog-box{
+        width: 280px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+        height: 550px;
+        box-shadow: 5px 5px 15px #609966;
+    }
+    .blog-box2{
+        width: 280px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+        height: 450px;
+        box-shadow: 5px 5px 15px #609966;
+    }
+   
+    .insertar_blog img{
+        width: 45px;
+        right: 10px;
+    }
+  /*carrusel----------------------------------------------------------------------------*/
+    .carrusel{
+        margin-left: 50%;
+    }
+}
+=======
 /* RESPONSIVE */
+>>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
