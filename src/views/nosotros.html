@@ -16,6 +16,7 @@
   <link rel="shortcut icon" href="../public/assets/hoja.png" type="image/x-icon">
   <!-- JS -->
   <script type="module" src="../scripts/index.js"></script>
+  <script src="../scripts/unmodule.js"></script>
   <!-- Bootstrap -->
   <script
       src="https://code.jquery.com/jquery-3.7.0.js"
@@ -33,15 +34,14 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/carrito.js"></script>
 </head>
 <body id="body1">
   <!--barra de navegacion--------------> 
-  <nav class="barra d-none d-sm-block">
+  <nav class="barra">
     <li id="">
       <a href="#" class="logo">
         <img src="../public/assets/hoja.png" alt="" />
-        <span class="nav-item-nombre">Ecogaia</span>
+        <span class="nav-item-nombre ">Ecogaia</span>
       </a>
     </li>
 
@@ -72,6 +72,7 @@
         href="#offcanvasExample"
         role="button"
         aria-controls="offcanvasExample"
+        
       >
         <i class="fas fa-cart-shopping"></i>
         <span class="nav-item">Carrito</span>
@@ -84,7 +85,9 @@
       >
         <div class="offcanvas-header">
           <img src="../public/assets/hoja.png" alt="" />
-          <h5 class="tituloCarrito" id="offcanvasExampleLabel">CARRITO</h5>
+          <h5 class="tituloCarrito" id="offcanvasExampleLabel">
+            CARRITO
+          </h5>
           <button
             type="button"
             class="btn-close text-reset"
@@ -93,16 +96,24 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <table class="table table-hover" id="tablaCarrito">
+          <table class="table table-hover">
             <thead>
               <tr class="titCarrito">
                 <th scope="col">Codigo</th>
                 <th scope="col">Producto</th>
                 <th scope="col">Cantidad</th>
                 <th scope="col">Total</th>
+                <th scope="col"><i class="fas fa-trash"></i></th>
               </tr>
             </thead>
+            <tbody id="tablaCarrito"></tbody>
           </table>
+          <button
+          type="button"
+          class="btn btn-success mb-2"
+        >
+          Comprar
+        </button>
         </div>
       </div>
     </li>
@@ -156,20 +167,31 @@
       <div class="blog-container">
         
         <!--Blog box 1----->
+<<<<<<< HEAD
+        <div class="blog-box2">
+            <!--imagen----->
+            <div class="blog-img">
+              <img src="../public/assets/mision.png" alt="">
+=======
         <div class="blog-box nosotros_cards">
           <!--imagen----->
           <div class="blog-img">
             <img src="../public/assets/mision.png" alt="">
+>>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
             </div>
             <!--texto----->
             <div class="blog-textN">
               <h2>Mision</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a laboriosam repellendus et possimus reiciendis cumque? Asperiores earum pariatur autem unde at commodi ipsam totam ullam iure in, temporibus corporis?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a laboriosam repellendus  earum pariatur autem unde at commodi ipsam totam ullam iure in, temporibus corporis?</p>
             </div>
         </div>
 
         <!--Blog box 2----->
+<<<<<<< HEAD
+        <div class="blog-box2">
+=======
         <div class="blog-box nosotros_cards">
+>>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
           <!--imagen----->
           <div class="blog-img">
             <img src="../public/assets/vision.png" alt="">
@@ -177,11 +199,15 @@
           <!--texto----->
           <div class="blog-textN">
             <h2>Vision</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a laboriosam repellendus et possimus reiciendis cumque? Asperiores earum pariatur autem unde at commodi ipsam totam ullam iure in, temporibus corporis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a laboriosam repellendus  earum pariatur autem unde at commodi ipsam totam ullam iure in, temporibus corporis?</p>
           </div>
         </div>
          <!--Blog box 3----->
+<<<<<<< HEAD
+        <div class="blog-box2">
+=======
         <div class="blog-box nosotros_cards">
+>>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
           <!--imagen----->
           <div class="blog-img">
            <img src="../public/assets/equipo.png" alt="">
@@ -189,7 +215,7 @@
           <!--texto----->
           <div class="blog-textN">
             <h2>Ecogaia</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a laboriosam repellendus et possimus reiciendis cumque? Asperiores earum pariatur autem unde at commodi ipsam totam ullam iure in, temporibus corporis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a laboriosam repellendus  earum pariatur autem unde at commodi ipsam totam ullam iure in, temporibus corporis?</p>
             
           </div>
        </div> 
@@ -197,6 +223,7 @@
 
     </div>    
     </section>
+<<<<<<< HEAD
     <!-- Footer -->
 
     <div class="contenido_footer">
@@ -217,7 +244,11 @@
         </div>
       </footer>
     </div>
+    <script src="../scripts/carrito.js"></script>  
+=======
+    
       
     
+>>>>>>> 2f45c3b0b00c65ad926af6afbb91684b3993b78d
 </body>
 </html>

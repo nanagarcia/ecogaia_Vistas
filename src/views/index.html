@@ -22,7 +22,6 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
@@ -48,7 +47,8 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-
+    <script type="module" src="../scripts/index.js"></script>
+    <script src="../scripts/unmodule.js"></script>
     <title>Ecogaia</title>
   </head>
   <body id="body1">
@@ -57,7 +57,7 @@
       <!-- Barra de busqueda -->
 
       <div class="box">
-        <input type="text" placeholder="Search"z />
+        <input type="text" id="search_product" placeholder="Search" />
         <i class="fa solid fa-magnifying-glass"></i>
       </div>
 
@@ -99,6 +99,7 @@
               href="#offcanvasExample"
               role="button"
               aria-controls="offcanvasExample"
+              
             >
               <i class="fas fa-cart-shopping"></i>
               <span class="nav-item">Carrito</span>
@@ -122,15 +123,17 @@
                 ></button>
               </div>
               <div class="offcanvas-body">
-                <table class="table table-hover" id="tablaCarrito">
+                <table class="table table-hover">
                   <thead>
                     <tr class="titCarrito">
                       <th scope="col">Codigo</th>
                       <th scope="col">Producto</th>
                       <th scope="col">Cantidad</th>
                       <th scope="col">Total</th>
+                      <th scope="col"><i class="fas fa-trash"></i></th>
                     </tr>
                   </thead>
+                  <tbody id="tablaCarrito"></tbody>
                 </table>
                 <button
                 type="button"
@@ -283,27 +286,12 @@
     <div class="productos " id="productos" style="display: flex; flex-wrap: wrap;">
       
     </div>
+<<<<<<< HEAD
+=======
       
     <!-- Footer -->
+>>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
 
-    <div class="contenido_footer">
-      <footer class="container-fluid align-self-end">
-        <div class="imagen">
-          <img src="../public/assets/logosecundario.png" alt="" />
-          <p>Cumpliendo tus necesidades y las del mundo</p>
-        </div>
-
-        <div class="redes">
-          <p>Nuestras redes sociales</p>
-
-          <div class="iconos">
-            <img src="../public/assets/facebook.png" alt="" />
-            <img src="../public/assets/whatsapp.png" alt="" />
-            <img src="../public/assets/instagram.png" alt="" />
-          </div>
-        </div>
-      </footer>
-    </div>
     <script src="../scripts/carrito.js"></script>
   </body>
 </html>
