@@ -31,8 +31,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="../scripts/carrito.js"></script>
+    <script src="../scripts/unmodule.js"></script>
     <!--link js-->
-    <link rel="stylesheet" href="../scripts/carrito.js" />
     <!--link ajax-------------->
     <link
       rel="stylesheet"
@@ -63,37 +63,38 @@
           <li id="">
             <a href="#" class="logo">
               <img src="../public/assets/hoja.png" alt="" />
-              <span class="nav-item-nombre">Ecogaia</span>
+              <span class="nav-item-nombre ">Ecogaia</span>
             </a>
           </li>
-    
+
           <li id="op1">
             <a href="./index.html" class="home">
               <i class="fas fa-home"></i>
               <span class="nav-item">Home</span>
             </a>
           </li>
-    
+
           <li id="op2">
             <a href="./nosotros.html" class="nosotros">
               <i class="fas fa-users"></i>
               <span class="nav-item">Nosotros</span>
             </a>
           </li>
-    
+
           <li id="op3">
             <a href="./Blog.html">
               <i class="fas fa-paper-plane"></i>
               <span class="nav-item">Blog</span>
             </a>
           </li>
-    
+
           <li id="op4">
             <a
               data-bs-toggle="offcanvas"
               href="#offcanvasExample"
               role="button"
               aria-controls="offcanvasExample"
+              
             >
               <i class="fas fa-cart-shopping"></i>
               <span class="nav-item">Carrito</span>
@@ -106,7 +107,9 @@
             >
               <div class="offcanvas-header">
                 <img src="../public/assets/hoja.png" alt="" />
-                <h5 class="tituloCarrito" id="offcanvasExampleLabel">CARRITO</h5>
+                <h5 class="tituloCarrito" id="offcanvasExampleLabel">
+                  CARRITO
+                </h5>
                 <button
                   type="button"
                   class="btn-close text-reset"
@@ -115,16 +118,24 @@
                 ></button>
               </div>
               <div class="offcanvas-body">
-                <table class="table table-hover" id="tablaCarrito">
+                <table class="table table-hover">
                   <thead>
                     <tr class="titCarrito">
                       <th scope="col">Codigo</th>
                       <th scope="col">Producto</th>
                       <th scope="col">Cantidad</th>
                       <th scope="col">Total</th>
+                      <th scope="col"><i class="fas fa-trash"></i></th>
                     </tr>
                   </thead>
+                  <tbody id="tablaCarrito"></tbody>
                 </table>
+                <button
+                type="button"
+                class="btn btn-success mb-2"
+              >
+                Comprar
+              </button>
               </div>
             </div>
           </li>
@@ -134,28 +145,28 @@
               <span class="nav-item">Inventario</span>
             </a>
           </li>
-    
+
           <li id="op6">
             <a href="./estadisticas.html">
               <i class="fas fa-ranking-star"></i>
               <span class="nav-item">Estadisticas</span>
             </a>
           </li>
-    
+
           <li id="op7">
-            <a href="./registrarse.html" id="inventario">
+            <a href="./repartidor.html" id="inventario">
               <i class="fas fa-folder-open"></i>
               <span class="nav-item">Repartidor</span>
             </a>
           </li>
-    
+
           <li id="op8">
             <a href="./registrarse.html" class="registro">
               <i class="fas fa-tasks"></i>
               <span class="nav-item">Registrarse</span>
             </a>
           </li>
-    
+
           <li id="op9">
             <a href="./iniciosesion.html" class="inicio2">
               <i class="fas fa-sign-out-alt"></i>
@@ -285,6 +296,6 @@
             <p>- 485 -</p>
           </div>
         </div>
-  
+        <script src="../scripts/carrito.js"></script>
   </body>
 </html>
