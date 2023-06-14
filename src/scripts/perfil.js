@@ -30,13 +30,28 @@ $(document).ready((e) => {
         if (res.length > 0) {
             res.forEach(fav => {
                 i++
-                table.innerHTML +="<tr id='fav"+i+"'><th scope='row'>"+i+"</th><td><img width='20' src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png' alt='imgProd'></td><td><h5>"+fav.prod_Nombre+"</h5></td><td><p>"+fav.prod_Precio+"</p></td><td><p>"+fav.prod_Cantidad+"</p></td></tr>"
+                table.innerHTML +="<tr id='fav"+i+"'><th scope='row'>"+i+"</th><td><img width='20' src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png' alt='imgProd'></td><td><h5>"+fav.prod_Nombre+"</h5></td><td><p>"+fav.prod_Precio+"</p></td><td><p>"+fav.prod_Cantidad+"</p></td><td><i class='fa fa-trash' onclick='deleteFav("+fav.codigo_favoritos+")'></i></td></tr>"
             });
         } else {
-            table.innerHTML = "<tr><td colspan='5'><p class='text-center'>No tienes favoritos</p></td></tr>"
+            table.innerHTML = "<tr><td colspan='7'><p class='text-center'>No tienes favoritos</p></td></tr>"
         }
     }
   });
 
-  
+  $("#deleteAll").on("click", () => {
+    $.ajax({
+        url: "http://localhost:8080/usuario/"+sessionStorage.getItem("user"),
+        type: "GET",
+        datatype: "JSON",
+        success: (res) => {
+            $.ajax({
+                url: "http://localhost:8080/eliminarTodoFavoritos/"+ res.id_usuario,
+                type: "DELETE",
+                success: (res) => {
+                    alert(res)
+                }
+            })
+        }
+    })
+  })
 });
