@@ -57,3 +57,14 @@ function deleteFav (codigo) {
         }
     })
 }
+
+function deleteCar (codigo) {
+    $.ajax({
+        url: "http://localhost:8080/eliminarCarrito/"+codigo,
+        type: "DELETE",
+        success: (res) => {
+            alert(res)
+            window.location.reload()
+        }
+    })
+}

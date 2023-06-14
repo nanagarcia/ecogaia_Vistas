@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecogaia</title>
-    <!--css link--------------> 
-    <link rel="stylesheet" href="../public/styles/style.css">
+    <!--css link-------------->
+    <link rel="stylesheet" href="../public/styles/style.css" />
     <!-- Bootstrap -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
@@ -24,187 +24,199 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!--fonts--------------> 
-    <link href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Tangerine:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <!--icono--------------> 
-    <link rel="shortcut icon" href="../public/assets/hoja.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!--fonts-------------->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm&family=Great+Vibes&family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!--icono-------------->
+    <link
+      rel="shortcut icon"
+      href="../public/assets/hoja.png"
+      type="image/x-icon"
+    />
     <!-- js --------------->
-    <script type="module" src="../scripts/perfil.js" ></script>
+    <script type="module" src="../scripts/perfil.js"></script>
     <script src="../scripts/unmodule.js"></script>
-</head>
-<body id="body3">
-  <!--barra navegacion--------------> 
-  <nav class="barra">
-    <li id="">
-      <a href="#" class="logo">
-        <img src="../public/assets/hoja.png" alt="" />
-        <span class="nav-item-nombre">Ecogaia</span>
-      </a>
-    </li>
-
-    <li id="op1">
-      <a href="./index.html" class="home">
-        <i class="fas fa-home"></i>
-        <span class="nav-item">Home</span>
-      </a>
-    </li>
-
-    <li id="op2">
-      <a href="./nosotros.html" class="nosotros">
-        <i class="fas fa-users"></i>
-        <span class="nav-item">Nosotros</span>
-      </a>
-    </li>
-
-    <li id="op3">
-      <a href="./Blog.html">
-        <i class="fas fa-paper-plane"></i>
-        <span class="nav-item">Blog</span>
-      </a>
-    </li>
-
-    <li id="op4">
-      <a
-        data-bs-toggle="offcanvas"
-        href="#offcanvasExample"
-        role="button"
-        aria-controls="offcanvasExample"
-        
-      >
-        <i class="fas fa-cart-shopping"></i>
-        <span class="nav-item">Carrito</span>
-      </a>
-      <div
-        class="offcanvas offcanvas-end"
-        tabindex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
-      >
-        <div class="offcanvas-header">
+  </head>
+  <body id="body3">
+    <!--barra navegacion-------------->
+    <nav class="barra">
+      <li id="">
+        <a href="#" class="logo">
           <img src="../public/assets/hoja.png" alt="" />
-          <h5 class="tituloCarrito" id="offcanvasExampleLabel">
-            CARRITO
-          </h5>
-          <button
-            type="button"
-            class="btn-close text-reset"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <table class="table table-hover" id="tablaCarrito">
-            <thead>
-              <tr class="titCarrito">
-                <th scope="col">Codigo</th>
-                <th scope="col">Producto</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-          </table>
-          <button
-          type="button"
-          class="btn btn-success mb-2"
+          <span class="nav-item-nombre ">Ecogaia</span>
+        </a>
+      </li>
+
+      <li id="op1">
+        <a href="./index.html" class="home">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a>
+      </li>
+
+      <li id="op2">
+        <a href="./nosotros.html" class="nosotros">
+          <i class="fas fa-users"></i>
+          <span class="nav-item">Nosotros</span>
+        </a>
+      </li>
+
+      <li id="op3">
+        <a href="./Blog.html">
+          <i class="fas fa-paper-plane"></i>
+          <span class="nav-item">Blog</span>
+        </a>
+      </li>
+
+      <li id="op4">
+        <a
+          data-bs-toggle="offcanvas"
+          href="#offcanvasExample"
+          role="button"
+          aria-controls="offcanvasExample"
+          
         >
-          Comprar
-        </button>
+          <i class="fas fa-cart-shopping"></i>
+          <span class="nav-item">Carrito</span>
+        </a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <img src="../public/assets/hoja.png" alt="" />
+            <h5 class="tituloCarrito" id="offcanvasExampleLabel">
+              CARRITO
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <table class="table table-hover">
+              <thead>
+                <tr class="titCarrito">
+                  <th scope="col">Codigo</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Total</th>
+                  <th scope="col"><i class="fas fa-trash"></i></th>
+                </tr>
+              </thead>
+              <tbody id="tablaCarrito"></tbody>
+            </table>
+            <button
+            type="button"
+            class="btn btn-success mb-2"
+          >
+            Comprar
+          </button>
+          </div>
         </div>
-      </div>
-    </li>
-    <li id="op5">
-      <a href="./inventarioEco.html" id="inventario">
-        <i class="fas fa-folder-open"></i>
-        <span class="nav-item">Inventario</span>
-      </a>
-    </li>
+      </li>
+      <li id="op5">
+        <a href="./inventarioEco.html" id="inventario">
+          <i class="fas fa-folder-open"></i>
+          <span class="nav-item">Inventario</span>
+        </a>
+      </li>
 
-    <li id="op6">
-      <a href="./estadisticas.html">
-        <i class="fas fa-ranking-star"></i>
-        <span class="nav-item">Estadisticas</span>
-      </a>
-    </li>
+      <li id="op6">
+        <a href="./estadisticas.html">
+          <i class="fas fa-ranking-star"></i>
+          <span class="nav-item">Estadisticas</span>
+        </a>
+      </li>
 
-    <li id="op7">
-      <a href="./repartidor.html" id="inventario">
-        <i class="fas fa-folder-open"></i>
-        <span class="nav-item">Repartidor</span>
-      </a>
-    </li>
+      <li id="op7">
+        <a href="./repartidor.html" id="inventario">
+          <i class="fas fa-folder-open"></i>
+          <span class="nav-item">Repartidor</span>
+        </a>
+      </li>
 
-    <li id="op8">
-      <a href="./registrarse.html" class="registro">
-        <i class="fas fa-tasks"></i>
-        <span class="nav-item">Registrarse</span>
-      </a>
-    </li>
+      <li id="op8">
+        <a href="./registrarse.html" class="registro">
+          <i class="fas fa-tasks"></i>
+          <span class="nav-item">Registrarse</span>
+        </a>
+      </li>
 
-    <li id="op9">
-      <a href="./iniciosesion.html" class="inicio2">
-        <i class="fas fa-sign-out-alt"></i>
-        <span class="nav-item">Inicio Sesion</span>
-      </a>
-    </li>
-  </nav>
-  <!--imagen fondo--------------> 
-  <!-- <img src="../public/assets/fondogris.png" class="wave" alt=""> -->
+      <li id="op9">
+        <a href="./iniciosesion.html" class="inicio2">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Inicio Sesion</span>
+        </a>
+      </li>
+    </nav>
+    <!--imagen fondo-------------->
+    <!-- <img src="../public/assets/fondogris.png" class="wave" alt=""> -->
 
-  <!--perfil usuario--------------> 
+    <!--perfil usuario-------------->
     <div class="info-container">
       <div class="left-side">
-          <div class="profile-container">
-              <img src="../public/assets/usuario.png" alt="" class="profile-icon">
-          </div>
+        <div class="profile-container">
+          <img src="../public/assets/usuario.png" alt="" class="profile-icon" />
+        </div>
       </div>
 
       <div class="right-side">
-          <div class="container">
-              <h1 class="title" id="userName">Usuario</h1>
-              <a href="./actualizacion.html" class="edit-profile">Editar perfil</a>
-          </div>
+        <div class="container">
+          <h1 class="title" id="userName">Usuario</h1>
+          <a href="./actualizacion.html" class="edit-profile">Editar perfil</a>
+        </div>
 
-          <div class="container">
-              <div class="info-content">
-                  <span id="cantFav" class="high">0</span>
-                  <span>Favoritos</span>
-              </div>
-              <div class="info-content">
-                  <span id="cantBlog" class="high">0</span>
-                  <span>Blogs</span>
-              </div>
-              
+        <div class="container">
+          <div class="info-content">
+            <span id="cantFav" class="high">0</span>
+            <span>Favoritos</span>
           </div>
-
-          <div class="description-container">
-              <span class="low" id="userEmail">usuario123@gmail.com</span>
+          <div class="info-content">
+            <span id="cantBlog" class="high">0</span>
+            <span>Blogs</span>
           </div>
+        </div>
 
+        <div class="description-container">
+          <span class="low" id="userEmail">usuario123@gmail.com</span>
+        </div>
       </div>
-  </div>
+    </div>
 
-  <!--barra de favoritos--------------> 
+    <!--barra de favoritos-------------->
 
-  <div class="barra-navegacion">
+    <div class="barra-navegacion">
       <span class="item">Favoritos</span>
-  </div>
+    </div>
 
-  <table class="table table-active w-75 m-auto">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Imagen</th>
-        <th scope="col">Producto</th>
-        <th scope="col">Precio</th>
-        <th scope="col">Cantidad</th>
-        <th scope="col"><i class="fas fa-trash" id="deleteAll"></i></th>
-      </tr>
-    </thead>
-    <tbody class="table-content">
-    </tbody>
-  </table>
-  <script src="../scripts/carrito.js"></script>
-</body>
+    <table class="table table-active w-75 m-auto">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col"><i class="fas fa-trash" id="deleteAll"></i></th>
+        </tr>
+      </thead>
+      <tbody class="table-content"></tbody>
+    </table>
+    <script src="../scripts/carrito.js"></script>
+  </body>
 </html>
