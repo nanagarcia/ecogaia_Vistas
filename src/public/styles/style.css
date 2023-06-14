@@ -256,9 +256,13 @@ li a{
     justify-content: center;
     align-items: center;
     box-shadow: 9px 8px 19px -3px rgba(96,153,102,1);
+    transition: transform 0.3s ease;
     
 }
+.categoria:hover{
+    transform: scale(1.2);
 
+}
 
 
 .categoria img{
