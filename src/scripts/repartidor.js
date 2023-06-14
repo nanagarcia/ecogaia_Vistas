@@ -3,11 +3,12 @@ import { on_session } from "./index.js";
 $(document).ready(function(){
     $(".barra")[0].style.backgroundColor = "#000000"
     $.ajax({
-        url:"http://localhost:8080/distribuir/7",
+        url:"http://localhost:8080/distribuir/montesrojasconsuelo@gmail.com" /* + sessionStorage.getItem("user") */ ,
         type: "GET",
         dataType: "JSON",
 
         success: function(respuesta){
+            console.log(respuesta)
 
             /* respuesta.forEach(function(res2){
     

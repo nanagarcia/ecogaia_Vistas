@@ -15,14 +15,16 @@
       rel="stylesheet"
     />
     <!-- JS -->
+    <script type="module" src="../scripts/index.js"></script>
+
     <script
       src="https://code.jquery.com/jquery-3.7.0.js"
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="../scripts/index.js"></script>
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&d isplay=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
     />
     <!-- CSS -->
@@ -51,10 +53,11 @@
   </head>
   <body id="body1">
     <div class="d-flex flex-column">
+
       <!-- Barra de busqueda -->
 
       <div class="box">
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search"z />
         <i class="fa solid fa-magnifying-glass"></i>
       </div>
 
@@ -65,7 +68,7 @@
           <li id="">
             <a href="#" class="logo">
               <img src="../public/assets/hoja.png" alt="" />
-              <span class="nav-item-nombre">Ecogaia</span>
+              <span class="nav-item-nombre ">Ecogaia</span>
             </a>
           </li>
 
@@ -153,7 +156,7 @@
           </li>
 
           <li id="op7">
-            <a href="./inventarioEco.html" id="inventario">
+            <a href="./repartidor.html" id="inventario">
               <i class="fas fa-folder-open"></i>
               <span class="nav-item">Repartidor</span>
             </a>
@@ -232,25 +235,7 @@
             </div>
           </div>
 
-          <!-- Botones de slider -->
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </button>
+          
         </div>
       </div>
     </div>
@@ -261,25 +246,31 @@
 
       <div class="categoria">
 
-        <button type="button"><img src="../public/assets/hogar.png" alt=""></button>
+        <a class="align-content-center button cate" href="#"  id="todos"><img src="../public/assets/productos.png" alt=""></a>
+          
+      </div>
+
+      <div class="categoria">
+
+        <a class="align-content-center button cate" href="#"  id="hogar"><img  src="../public/assets/hogar.png" alt=""></a>
         
       </div>
 
       <div class="categoria">
 
-        <button type="button"><img src="../public/assets/mascotas.png" alt=""></button>
+        <a href="#" class="align-content-center button cate" id="mascotas"><img src="../public/assets/mascotas.png" alt=""></a>
 
       </div>
 
       <div class="categoria">
 
-        <button type="button"><img src="../public/assets/maquillaje.png" alt=""></button>
+        <a href="#" class="align-content-center button cate" id="maquillaje"><img src="../public/assets/maquillaje.png" alt=""></a>
 
       </div>
 
       <div class="categoria">
 
-        <button type="button"><img src="../public/assets/higiene.png" alt=""></button>
+        <a href="#" class="align-content-center button cate" id="higiene"><img src="../public/assets/higiene.png" alt=""></a>
 
       </div>
 
@@ -289,9 +280,22 @@
 
     <!-- Contenido -->
 
+<<<<<<< HEAD
+    
+      <div class="productos flex-wrap d-flex" id="productos">
+        
+      </div>
+
+=======
     <div class="productos " id="productos" style="display: flex; flex-wrap: wrap;">
       
     </div>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> e52beb16688221bb853fea0e0e9a596243d7b8fb
+    <!-- Footer -->
+>>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
 
     <script src="../scripts/carrito.js"></script>
   </body>
