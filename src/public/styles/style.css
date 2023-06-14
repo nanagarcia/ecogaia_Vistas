@@ -110,6 +110,7 @@ li a{
     color:#609966;
 }
 
+
 .barra .nav-item{
     position: relative;
     top: 12px;
@@ -364,6 +365,47 @@ li a{
     height: 40px;
 }
 
+/* boton carrito */
+
+.comp_carrito{
+    display: inline-flex;
+    width: 30%;
+    height: 40px;
+    margin: 20px 0 40px 0;
+    margin-inline: 2%;
+    align-items: center;
+    justify-content: center;
+    background: #678663;
+    color: #fff;
+    transition: .3s ease all;
+    border-radius: 3px;
+    border: #678663 1px solid;
+    overflow: hidden;
+}
+
+.comp_carrito::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: relative;
+    z-index: 0;
+    transition: .8s ease-in-out all;
+    border-radius: 100px;
+    transform-origin: center;
+}
+
+.comp_carrito:hover span{
+    color: #609966;
+    z-index: 1;
+}
+
+.comp_carrito:hover::after{
+    transform: scale(400);
+    background: #fff;
+}
+
+
 
 /*Estadisticas ------------------------------------------------------------------*/
 .estadisticas{
@@ -553,10 +595,6 @@ input{
     
 }
 .blogN{
-<<<<<<< HEAD
-    margin-top: 2%;
-=======
->>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
     display: flex;
     justify-content: center;
     align-items: center;
@@ -605,11 +643,6 @@ input{
     background-color: white;
     margin: 20px;
     border-radius: 10px;
-<<<<<<< HEAD
-    height: 520px;
-    transition: all 0.9s;
-    border: #07070718 2px solid;
-=======
     height: 580px;
     box-shadow: 5px 5px 15px #609966;
 }
@@ -621,7 +654,6 @@ input{
     border-radius: 10px;
     height: 420px;
     box-shadow: 5px 5px 15px #609966;
->>>>>>> 1e122b8a8dc1d9c07b1744767a0e6bd7dedc8493
 }
 
 .blog-box:hover{
@@ -1231,6 +1263,11 @@ footer{
     justify-content: space-around;
 }
 
+
+.barra-responsive {
+    display: none;
+}
+
 .iconos img{
     padding: 6px;
 }
@@ -1279,12 +1316,48 @@ footer{
     margin-left: 40px;
 }
 
-<<<<<<< HEAD
+.logo .cerrar_barra{
+    padding-right: 30px;
+    display: none;
+}
+
+
 @media screen and (min-width:320px) and (max-width:620px){
+
+    /* Barra */
+
+    .barra-responsive{
+        background-color: #fff;
+        align-items: center;
+        display: flex;
+        z-index: 0;
+        box-shadow: 0 20px 35px rgba(88, 88, 88, 0.1);
+    }
+
+    .barra-responsive .nav-item-nombre-responsive{
+        font-weight: bold;
+        font-size: 25px;
+        font-family: 'Charm', cursive;
+        padding: 15px;
+        text-transform: uppercase;
+        color:#609966;
+    }
+
+    .barra-responsive {
+        display: block;
+        align-items: center;
+        display: flex;
+    }
+
+    .logo .cerrar_barra{
+        display: block;
+    }
+
     /*blog/nosotros---------------------------------------------------------*/
     .barra{
         display: none;
     }
+
     .box{
         margin-top: 5%;
         margin-left: 15%;
@@ -1320,6 +1393,3 @@ footer{
         margin-left: 50%;
     }
 }
-=======
-/* RESPONSIVE */
->>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
