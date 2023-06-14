@@ -97,7 +97,7 @@ li a{
     color: #609966;
 }
 
-.nav-item-nombre{
+.barra .nav-item-nombre{
     margin-left: 5px;
     position: relative;
     top: 12px;
@@ -110,7 +110,7 @@ li a{
     color:#609966;
 }
 
-.nav-item{
+.barra .nav-item{
     position: relative;
     top: 12px;
     margin-left: 10px;
@@ -165,14 +165,23 @@ li a{
 }
 
 .producto{
+     overflow: hidden;
     width: 20%;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.356);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
+    transition: all 0.9s;
+    border: #07070718 2px solid;
+}
+
+.producto:hover{
+    transform: translateY(-15px);
+    box-shadow: -1px 7px 25px -3px rgba(96,153,102,0.98);
+
 }
 
 .producto h1{
@@ -240,38 +249,75 @@ li a{
 /* Categorias ---------------------------------------------------------------------*/
 
 .categorias{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .categoria{
+    margin-inline: 2%;
+    transition: all 0.5s ease;
+}
+
+
+.categoria:hover{
+    transform: scaleY(0.9)
+}
+
+.categoria a{
     width: 90px;
     height: 90px;
     background-color: #609966;
-    margin-right: 30px;
-    margin-left: 30px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
     box-shadow: 9px 8px 19px -3px rgba(96,153,102,1);
     transition: transform 0.3s ease;
-    
 }
 .categoria:hover{
     transform: scale(1.2);
-
 }
 
-
-.categoria img{
-    width: 70%;
+.categoria a img:hover{
+    transform: scale(0.9);
 }
 
-.categoria button{
+.categoria a img{
+    width: 45%;
+    margin-top: 28%;
+    margin-left: 28%;
+    transition: all 0.5s ease;
+}
+
+.categoria .cate{
     background-color: #609966;
+    position: relative;
+    display: inline-block;
 }
+
+.categoria span{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 3;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
 
 
 /* Añadir blog -----------------------------------------------------------------*/
@@ -292,7 +338,7 @@ li a{
 
 #btn_add_blog{
     padding: 0%;
-    margin: 0%;
+    margin-left: 0%;
     width: auto;
 }
 
@@ -304,6 +350,7 @@ li a{
 .offcanvas-header{
     background-color: #60996605;
 }
+
 
 .offcanvas-header h5{
     position: relative;
@@ -471,11 +518,10 @@ input{
     align-items: center;
     flex-direction: column;
     padding: 30px;
-    border-bottom: 1px solid white;
     
 }
 .blogN{
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -486,9 +532,18 @@ input{
 }
 .blogN h3{
     color: #609966;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: 'Charm', cursive;
+}
+
+.blog-heading h3{
+    margin-top: 5%;
+    color: #609966;
     font-size: 40px;
     font-family: 'Quicksand', sans-serif;
 }
+
 .blog_in{
     width: 100%;
     height: 10%;
@@ -515,7 +570,16 @@ input{
     background-color: white;
     margin: 20px;
     border-radius: 10px;
-    height: 520px;
+    height: 580px;
+    box-shadow: 5px 5px 15px #609966;
+}
+
+.blog-box2{
+    width: 340px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    height: 420px;
     box-shadow: 5px 5px 15px #609966;
 }
 .blog-text{
@@ -551,6 +615,7 @@ input{
     transition: all ease 0.3s;
 }
 .blog-text p{
+    
     color: #A4B494;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -570,18 +635,20 @@ input{
 .blog-text h2{
     color: #609966;
     display: -webkit-box;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-family: 'Charm', cursive;
     margin-top: 6%;
 }
 .blog-text2 h2{
     color: #609966;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Charm', cursive;
     display: -webkit-box;
     margin-top: 6%;
 }
 .blog-textN h2{
     color: #609966;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-family: 'Charm', cursive;
     display: -webkit-box;
     margin-top: 2%;
     margin-left: 35%;
@@ -589,7 +656,8 @@ input{
 .blog h3{
     color: #609966;
     font-size: 40px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Charm', cursive;
+    font-weight: bold;
 }
 .blog-heading{
     color: white;
@@ -627,6 +695,15 @@ input{
 	font-size: 18px;
 	transition: .3s;
 }
+
+.nosotros_cards{
+    transition: all 1s;
+}
+
+.nosotros_cards:hover{
+    transform: translateX(20px)
+}
+
 
 /*formularios ----------------------------------------------------------------------*/
 
@@ -771,12 +848,44 @@ form h2{
 	font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
 	margin: 1rem 0;
+    margin-top: 40px;
 	cursor: pointer;
 	transition: .5s;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
-.btn:hover{
-	background-position: right;
+
+.btnForms span{
+    transition: .4s;
+    position: absolute;
+    left: 76%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.btnForms:hover span{
+    left: 67%
+}
+
+.btnForms .icono{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 60%;
+    transition: .3s ease-in-out all;
+}
+
+.btnForms .icono svg{
+    color: #fff;
+    width: 30px;
+    height: 30px;
+}
+
+.btnForms:hover .icono{
+    left:  calc(87% );
 }
 
 
@@ -878,7 +987,7 @@ form h2{
     margin: 0.2rem 0;
 }
 
-span{
+.barra span{
     font-size: 16px;
 }
 
@@ -954,6 +1063,7 @@ span{
 .cancelar img{
     width: 10px;
 }
+
 
 /* FOOTER -----------------------------------------------------------------------*/
 footer{
@@ -1048,3 +1158,43 @@ footer{
     margin-left: 40px;
 }
 
+@media screen and (min-width:320px) and (max-width:620px){
+    /*blog/nosotros---------------------------------------------------------*/
+    .barra{
+        display: none;
+    }
+    .box{
+        margin-top: 5%;
+        margin-left: 15%;
+        width: 280px;
+        height: 35px;
+    }
+    .blog{
+        margin-left: 15%;
+    }
+    .blog-box{
+        width: 280px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+        height: 550px;
+        box-shadow: 5px 5px 15px #609966;
+    }
+    .blog-box2{
+        width: 280px;
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+        height: 450px;
+        box-shadow: 5px 5px 15px #609966;
+    }
+   
+    .insertar_blog img{
+        width: 45px;
+        right: 10px;
+    }
+  /*carrusel----------------------------------------------------------------------------*/
+    .carrusel{
+        margin-left: 50%;
+    }
+}

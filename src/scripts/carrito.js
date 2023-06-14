@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  console.log(window.location.pathname)
   var user = sessionStorage.getItem("user")
   $.ajax({
     url: "http://localhost:8080/cotizacionesUsuario/"+ user,
@@ -14,6 +15,7 @@ $(document).ready(function(){
           + cotiza.total + '</td>'
         });
       } else {
+
         tablaCarrito.innerHTML += "<tr><td colspan='5'><p class='text-center'>No tienes nada en carrito</p></td></tr>"
       }
       
