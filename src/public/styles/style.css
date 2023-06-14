@@ -159,14 +159,14 @@ li a{
 .productos{
     width: 80%;
     height: auto; 
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 4%;
     display: flex;
     justify-content: center;
 }
 
 .producto{
-     overflow: hidden;
+    overflow: hidden;
     width: 20%;
     background-color: white;
     border-radius: 8px;
@@ -253,6 +253,16 @@ li a{
 
 
 /* Categorias ---------------------------------------------------------------------*/
+
+.btn-categorias{
+    width: 30%;
+    margin-left: 5%;
+    background-color: white;
+    color: #609966;
+    text-decoration: none;
+    display: none;
+}
+
 
 .categorias{
     margin-top: 20px;
@@ -1316,11 +1326,14 @@ footer{
     margin-left: 40px;
 }
 
+<<<<<<< HEAD
 .logo .cerrar_barra{
     padding-right: 30px;
     display: none;
 }
 
+=======
+>>>>>>> 90613e204c41c0a6e3df9bd887621288182c5b98
 
 @media screen and (min-width:320px) and (max-width:620px){
 
@@ -1360,7 +1373,7 @@ footer{
 
     .box{
         margin-top: 5%;
-        margin-left: 15%;
+        margin-left: 10%;
         width: 280px;
         height: 35px;
     }
@@ -1392,4 +1405,45 @@ footer{
     .carrusel{
         margin-left: 50%;
     }
+ /*categorias----------------------------------------------------------------------------*/
+    .categoria{
+        transition: all 0.5s ease;
+        display: none;
+    }
+    .categoria a{
+        width: 52px;
+        height: 52px;
+    }
+    .btn-categorias{
+        width: 30%;
+        margin-left: 5%;
+        background-color: white;
+        color: #609966;
+        text-decoration: none;
+    }
+    
+
+ /*productos----------------------------------------------------------------------------*/
+    .productos{
+        flex-direction: column;
+    }
+
+    .producto{
+        overflow: hidden;
+        width: 90%;
+        background-color: white;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        transition: all 0.9s;
+        border: #07070718 2px solid;
+    }
+
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 90613e204c41c0a6e3df9bd887621288182c5b98
