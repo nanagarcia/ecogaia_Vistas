@@ -110,6 +110,7 @@ li a{
     color:#609966;
 }
 
+
 .barra .nav-item{
     position: relative;
     top: 12px;
@@ -158,14 +159,14 @@ li a{
 .productos{
     width: 80%;
     height: auto; 
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 4%;
     display: flex;
     justify-content: center;
 }
 
 .producto{
-     overflow: hidden;
+    overflow: hidden;
     width: 20%;
     background-color: white;
     border-radius: 8px;
@@ -253,6 +254,16 @@ li a{
 
 /* Categorias ---------------------------------------------------------------------*/
 
+.btn-categorias{
+    width: 30%;
+    margin-left: 5%;
+    background-color: white;
+    color: #609966;
+    text-decoration: none;
+    display: none;
+}
+
+
 .categorias{
     margin-top: 20px;
     display: flex;
@@ -265,12 +276,16 @@ li a{
     transition: all 0.5s ease;
 }
 
+<<<<<<< HEAD
 
 .categoria img {
     z-index: 3;
 }
 
 .categoria-contenedor:hover{
+=======
+.categoria:hover{
+>>>>>>> 54aea13c9ded2c7004705fb830121353b4339ea3
     transform: scaleY(0.9)
 }
 
@@ -368,6 +383,47 @@ li a{
     width: 40px;
     height: 40px;
 }
+
+/* boton carrito */
+
+.comp_carrito{
+    display: inline-flex;
+    width: 30%;
+    height: 40px;
+    margin: 20px 0 40px 0;
+    margin-inline: 2%;
+    align-items: center;
+    justify-content: center;
+    background: #678663;
+    color: #fff;
+    transition: .3s ease all;
+    border-radius: 3px;
+    border: #678663 1px solid;
+    overflow: hidden;
+}
+
+.comp_carrito::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: relative;
+    z-index: 0;
+    transition: .8s ease-in-out all;
+    border-radius: 100px;
+    transform-origin: center;
+}
+
+.comp_carrito:hover span{
+    color: #609966;
+    z-index: 1;
+}
+
+.comp_carrito:hover::after{
+    transform: scale(400);
+    background: #fff;
+}
+
 
 
 /*Estadisticas ------------------------------------------------------------------*/
@@ -487,16 +543,48 @@ h3{
 
 /* botones inventario */
 
+.btn_crud{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .btn_invt{
-    background-color: #609966;
-    color: aliceblue;
-    border-radius: 4px;
-    padding: 7px;
-    margin-right: 20px;
-    margin-bottom: 10%;
-    margin-top: 5%;
-    
+    display: inline-flex;
+    width: 12%;
+    height: 40px;
+    margin: 20px 0 40px 0;
+    margin-inline: 2%;
+    align-items: center;
+    justify-content: center;
+    background: #609966;
+    color: #fff;
+    transition: .3s ease all;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.btn_invt::after{
+    content: "";
+    width: 1px;
+    height: 1px;
+    background: none;
+    position: relative;
+    z-index: 0;
+    transition: .8s ease-in-out all;
+    border-radius: 100px;
+    transform-origin: center;
+}
+
+.btn_invt:hover span{
+    color: #609966;
+    z-index: 1;
+}
+
+.btn_invt:hover::after{
+    transform: scale(400);
+    background: #fff;
 }
 
 
@@ -596,6 +684,12 @@ input{
     height: 420px;
     box-shadow: 5px 5px 15px #609966;
 }
+
+.blog-box:hover{
+    transform: translateY(-15px);
+    box-shadow: -1px 7px 25px -3px rgba(96,153,102,0.98);
+}
+
 .blog-text{
     display: flex;
     flex-direction: column;
@@ -872,19 +966,19 @@ form h2{
 
 
 .btnForms span{
-    transition: .4s;
+    transition: .4s ease-in-out all;
     position: absolute;
-    left: 76%;
     display: flex; 
     justify-content: center; 
     align-items: center;
+    
 }
 
-.btnForms:hover span{
-    left: 67%
+.btnForms:hover span {
+    margin: 0 15% 0 0;
 }
 
-.btnForms .icono{
+.btnForms .ini_ico{
     display: flex;
     position: absolute;
     z-index: 1;
@@ -892,16 +986,52 @@ form h2{
     transition: .3s ease-in-out all;
 }
 
-.btnForms .icono svg{
+.btnForms svg{
     color: #fff;
     width: 30px;
     height: 30px;
 }
 
-.btnForms:hover .icono{
-    left:  calc(87% );
+.btnForms:hover .ini_ico{
+    left:  calc(89%);
 }
 
+
+.btnForms .registro_ico{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 64%;
+    transition: .3s ease-in-out all;
+}
+
+.btnForms:hover .registro_ico{
+    left:  calc(89%);
+}
+
+.btnForms .actu_ico{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 64%;
+    transition: .3s ease-in-out all;
+}
+
+.btnForms:hover .actu_ico{
+    left:  calc(89%);
+}
+
+.btnForms .blog_ico{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    left: 64%;
+    transition: .3s ease-in-out all;
+}
+
+.btnForms:hover .blog_ico{
+    left:  calc(89%);
+}
 
 
 /*perfil --------------------------------------------------------------------------*/
@@ -1069,7 +1199,7 @@ form h2{
 
 .login-contenedor{
     margin-top: 2%;
-    margin-left: 60%;
+    margin-left: 62%;
 }
 
 /* blog_insertar -----------------------------------------------------------------*/
@@ -1078,6 +1208,44 @@ form h2{
     width: 10px;
 }
 
+/* boton switch */
+
+
+.lbl-switch{
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    background: #ffffff;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+#btn-switch:checked~ .lbl-switch{
+    background: #609966;
+}
+
+
+.lbl-switch:after{
+    position: absolute;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #aaa;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;
+    transition: 0.3s;
+}
+
+#btn-switch:checked~ .lbl-switch:after{
+    left: 28px;
+    background: #fff;
+}
+
+#btn-switch{
+    display: none;
+}
 
 /* FOOTER -----------------------------------------------------------------------*/
 footer{
@@ -1122,6 +1290,11 @@ footer{
 .iconos{
     display: flex;
     justify-content: space-around;
+}
+
+
+.barra-responsive {
+    display: none;
 }
 
 .iconos img{
@@ -1172,14 +1345,57 @@ footer{
     margin-left: 40px;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.logo .cerrar_barra{
+    padding-right: 30px;
+    display: none;
+}
+
+=======
+>>>>>>> 90613e204c41c0a6e3df9bd887621288182c5b98
+
+>>>>>>> 54aea13c9ded2c7004705fb830121353b4339ea3
 @media screen and (min-width:320px) and (max-width:620px){
+
+    /* Barra */
+
+    .barra-responsive{
+        background-color: #fff;
+        align-items: center;
+        display: flex;
+        z-index: 0;
+        box-shadow: 0 20px 35px rgba(88, 88, 88, 0.1);
+    }
+
+    .barra-responsive .nav-item-nombre-responsive{
+        font-weight: bold;
+        font-size: 25px;
+        font-family: 'Charm', cursive;
+        padding: 15px;
+        text-transform: uppercase;
+        color:#609966;
+    }
+
+    .barra-responsive {
+        display: block;
+        align-items: center;
+        display: flex;
+    }
+
+    .logo .cerrar_barra{
+        display: block;
+    }
+
     /*blog/nosotros---------------------------------------------------------*/
     .barra{
         display: none;
     }
+
     .box{
         margin-top: 5%;
-        margin-left: 15%;
+        margin-left: 10%;
         width: 280px;
         height: 35px;
     }
@@ -1211,4 +1427,48 @@ footer{
     .carrusel{
         margin-left: 50%;
     }
+ /*categorias----------------------------------------------------------------------------*/
+    .categoria{
+        transition: all 0.5s ease;
+        display: none;
+    }
+    .categoria a{
+        width: 52px;
+        height: 52px;
+    }
+    .btn-categorias{
+        width: 30%;
+        margin-left: 5%;
+        background-color: white;
+        color: #609966;
+        text-decoration: none;
+    }
+    
+
+ /*productos----------------------------------------------------------------------------*/
+    .productos{
+        flex-direction: column;
+    }
+
+    .producto{
+        overflow: hidden;
+        width: 90%;
+        background-color: white;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        transition: all 0.9s;
+        border: #07070718 2px solid;
+    }
+
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 90613e204c41c0a6e3df9bd887621288182c5b98
+>>>>>>> 54aea13c9ded2c7004705fb830121353b4339ea3

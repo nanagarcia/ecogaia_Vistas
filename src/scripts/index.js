@@ -205,4 +205,14 @@ export const off_session = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
+  $(".btn-hamburguesa").on("click", () => {
+  $(".barra")[0].style.display = "block"
+}) 
+
+$(".cerrar_barra").on("click", () => {
+  $(".barra")[0].style.display = "none"
+})
+>>>>>>> 54aea13c9ded2c7004705fb830121353b4339ea3
 
