@@ -68,3 +68,14 @@ function deleteCar (codigo) {
         }
     })
 }
+
+function comprar () {
+    $.ajax({
+        url: "http://localhost:8080/compra/"+ sessionStorage.getItem("user"),
+        type: "GET",
+        datatype: "JSON",
+        success: (res) => {
+            alert(res)
+        }
+    })
+}

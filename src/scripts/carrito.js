@@ -1,6 +1,7 @@
 $("#op4").on("click", function () {
   console.log(window.location.pathname)
   var user = sessionStorage.getItem("user");
+  tablaCarrito.innerHTML = ""
   $.ajax({
     url: "http://localhost:8080/cotizacionesUsuario/" + user,
     type: "GET",

@@ -15,7 +15,6 @@ $(document).ready((e) => {
         datatype: "JSON",
         success: (res) => {
           if (res.error != "Usuario o contraseña incorrectos") {
-            alert(res)
             sessionStorage.setItem("status", res.rol);
             sessionStorage.setItem("user", res.res)
             window.location.href = "index.html";

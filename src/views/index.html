@@ -136,6 +136,7 @@
                   <tbody id="tablaCarrito"></tbody>
                 </table>
                 <button
+                onclick="comprar()"
                 type="button"
                 class="btn btn-success mb-2"
               >
@@ -247,33 +248,37 @@
 
     <div class="categorias">
 
-      <div class="categoria">
-
-        <a class="align-content-center button cate" href="#"  id="todos"><img src="../public/assets/productos.png" alt=""></a>
+      <div class="categoria-contenedor">
+        <script>
+          const todo = () => {
+            window.location.reload()
+          }
+        </script>
+        <a class="align-content-center button cate" href="#" onclick="todo()" ><img src="../public/assets/productos.png" alt=""></a>
           
       </div>
 
-      <div class="categoria">
+      <div class="categoria-contenedor">
 
-        <a class="align-content-center button cate" href="#"  id="hogar"><img  src="../public/assets/hogar.png" alt=""></a>
+        <a class="align-content-center button cate" href="#" ><img class="categoria"  src="../public/assets/hogar.png" alt="Hogar"></a>
         
       </div>
 
-      <div class="categoria">
+      <div class="categoria-contenedor">
 
-        <a href="#" class="align-content-center button cate" id="mascotas"><img src="../public/assets/mascotas.png" alt=""></a>
-
-      </div>
-
-      <div class="categoria">
-
-        <a href="#" class="align-content-center button cate" id="maquillaje"><img src="../public/assets/maquillaje.png" alt=""></a>
+        <a href="#" class="align-content-center button cate"><img class="categoria" src="../public/assets/mascotas.png" alt="Mascotas"></a>
 
       </div>
 
-      <div class="categoria">
+      <div class="categoria-contenedor">
 
-        <a href="#" class="align-content-center button cate" id="higiene"><img src="../public/assets/higiene.png" alt=""></a>
+        <a href="#" class="align-content-center button cate"><img class="categoria" src="../public/assets/maquillaje.png" alt="Maquillaje"></a>
+
+      </div>
+
+      <div class="categoria-contenedor">
+
+        <a href="#" class="align-content-center button cate"><img class="categoria" src="../public/assets/higiene.png" alt="Personal"></a>
 
       </div>
 
@@ -286,11 +291,8 @@
     <div class="productos " id="productos" style="display: flex; flex-wrap: wrap;">
       
     </div>
-<<<<<<< HEAD
-=======
       
     <!-- Footer -->
->>>>>>> aee3be2c84abdc624770c4e1fe233d09ab3803bf
 
     <script src="../scripts/carrito.js"></script>
   </body>
