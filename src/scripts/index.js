@@ -10,7 +10,7 @@ $(document).ready(() => {
         success: (res) => {
           res.forEach((producto) => {
             productos.innerHTML +=
-              "<div class='producto ms-5 mb-3' id='producto'><img  src='https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg'  alt='producto'  /><h1 class='articulos text-center text-success'>" +
+              "<div class='producto mx-4 mb-3' id='producto'><img  src='https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg'  alt='producto'  /><h1 class='articulos text-center text-success'>" +
               producto.prod_Nombre +
               "</h1><p>$" +
               producto.prod_Precio +
@@ -158,7 +158,7 @@ $(document).ready(() => {
           res.forEach((producto) => {
             i++;
             productos.innerHTML +=
-              "<div class='producto ms-5 mb-3' id='producto'><img  src='https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg'  alt='producto'  /><h1 class='articulos text-center text-success'>" +
+              "<div class='producto mb-4' id='producto'><img  src='https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg'  alt='producto'  /><h1 class='articulos text-center text-success'>" +
               producto.prod_Nombre +
               "</h1><p>$" +
               producto.prod_Precio +
@@ -166,7 +166,7 @@ $(document).ready(() => {
               i +
               "'>Mas información</button>";
             productos.innerHTML +=
-              "<!-- Modal --><div  class='modal fade w-25'  id='exampleModal'  tabindex='-1'  aria-labelledby='exampleModalLabel'  aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header'><h1 class='modal-title fs-5 text-success'id='exampleModalLabel'>Mas información</h1><button type='button'class='btn-close'data-bs-dismiss='modal'aria-label='Close'></button></div><div class='modal-body'><i class='fa-regular fa-star'></i><img class='producto_img'src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png'alt=''/><p class='precio'>" +
+              "<!-- Modal --><div  class='modal fade'  id='exampleModal'  tabindex='-1'  aria-labelledby='exampleModalLabel'  aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header'><h1 class='modal-title fs-5 text-success'id='exampleModalLabel'>Mas información</h1><button type='button'class='btn-close'data-bs-dismiss='modal'aria-label='Close'></button></div><div class='modal-body'><i class='fa-regular fa-star'></i><img class='producto_img'src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png'alt=''/><p class='precio'>" +
               producto.prod_Categoria +
               "</p><h1 class='text-center text-success'>" 
               producto.prod_Nombre +
