@@ -1,6 +1,7 @@
 import { on_session } from "./index.js";
 
 $(document).ready((e) => {
+    $(".barra")[0].style.backgroundColor = "#000000"
     const table = document.querySelector(".table-content")
     var user = sessionStorage.getItem("user")
 

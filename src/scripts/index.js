@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  on_session(); 
+  on_session();
   if (window.location.pathname == "/src/views/index.html") {
     const productos = document.getElementById("productos");
     const listar = () => {
@@ -14,36 +14,50 @@ $(document).ready(() => {
               producto.prod_Nombre +
               "</h1><p>$" +
               producto.prod_Precio +
-              "</p><!-- Button trigger modal --><button id=''  type='button'  class='btn btn-success mb-2'  data-bs-toggle='modal'  data-bs-target='#exampleModal" +
+              "</p><!-- Button trigger modal --><type='button' class='btn btn-success mb-2' data-bs-toggle='modal'  data-bs-target='#exampleModal" +
               producto.prod_Codigo +
               "'>Mas información</button>";
             productos.innerHTML +=
-              '<!-- Modal --><div  class="modal fade w-25"  id="exampleModal'+producto.prod_Codigo+'"  tabindex="-1"  aria-labelledby="exampleModalLabel"  aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5 text-success"id="exampleModalLabel">Mas información</h1><button type="button"class="btn-close"data-bs-dismiss="modal"aria-label="Close"></button></div><div class="modal-body"><i onclick="add('+"'"+producto.prod_Codigo+"','"+sessionStorage.getItem("user")+"'"+')" class="fa-regular fa-star"></i><img class="producto_img"src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png"alt=""/><p class="precio">' +
+              '<!-- Modal --><div  class="modal fade w-25"  id="exampleModal' +
+              producto.prod_Codigo +
+              '"  tabindex="-1"  aria-labelledby="exampleModalLabel"  aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5 text-success"id="exampleModalLabel">Mas información</h1><button type="button"class="btn-close"data-bs-dismiss="modal"aria-label="Close"></button></div><div class="modal-body"><i onclick="add(' +
+              "'" +
+              producto.prod_Codigo +
+              "','" +
+              sessionStorage.getItem("user") +
+              "'" +
+              ')" class="fa-regular fa-star"></i><img class="producto_img"src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png"alt=""/><p class="precio">' +
               producto.prod_Categoria +
               "</p><h1 class='text-center text-success'>" +
               producto.prod_Nombre +
               "</h1><p class='contenido '>$" +
               producto.prod_Precio +
-              '</p><button type="button" onclick="addCar('+"'"+producto.prod_Codigo+"','"+sessionStorage.getItem("user")+"'"+')" class="btn btn-success">Agregar a Carrito</button></div></div></div></div></div></div>';
+              '</p><button type="button" onclick="addCar(' +
+              "'" +
+              producto.prod_Codigo +
+              "','" +
+              sessionStorage.getItem("user") +
+              "'" +
+              ')" class="btn btn-success">Agregar a Carrito</button></div></div></div></div></div></div>';
           });
         },
       });
-    }
+    };
 
-    listar()
+    listar();
 
     $("#search_product").on("input", (e) => {
-      const nombre = e.target.value
+      const nombre = e.target.value;
       if (nombre == "") {
-        productos.innerHTML = ""
-        listar()
+        productos.innerHTML = "";
+        listar();
       } else {
         $.ajax({
           url: "http://localhost:8080/nombreProducto/" + nombre,
           type: "GET",
           datatype: "JSON",
           success: (res) => {
-            productos.innerHTML = ""
+            productos.innerHTML = "";
             res.forEach((producto) => {
               productos.innerHTML +=
                 "<div class='producto ms-5 mb-3' id='producto'><img  src='https://cdn.pixabay.com/photo/2022/02/04/08/59/soap-6992365_640.jpg'  alt='producto'  /><h1 class='articulos text-center text-success'>" +
@@ -54,23 +68,31 @@ $(document).ready(() => {
                 producto.prod_Codigo +
                 "'>Mas información</button>";
               productos.innerHTML +=
-                '<!-- Modal --><div  class="modal fade w-25"  id="exampleModal'+producto.prod_Codigo+'"  tabindex="-1"  aria-labelledby="exampleModalLabel"  aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5 text-success"id="exampleModalLabel">Mas información</h1><button type="button"class="btn-close"data-bs-dismiss="modal"aria-label="Close"></button></div><div class="modal-body"><i onclick="add('+"'"+producto.prod_Codigo+"','"+sessionStorage.getItem("user")+"'"+')" class="fa-regular fa-star"></i><img class="producto_img"src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png"alt=""/><p class="precio">' +
+                '<!-- Modal --><div  class="modal fade w-25"  id="exampleModal' +
+                producto.prod_Codigo +
+                '"  tabindex="-1"  aria-labelledby="exampleModalLabel"  aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h1 class="modal-title fs-5 text-success"id="exampleModalLabel">Mas información</h1><button type="button"class="btn-close"data-bs-dismiss="modal"aria-label="Close"></button></div><div class="modal-body"><i onclick="add(' +
+                "'" +
+                producto.prod_Codigo +
+                "','" +
+                sessionStorage.getItem("user") +
+                "'" +
+                ')" class="fa-regular fa-star"></i><img class="producto_img"src="https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png"alt=""/><p class="precio">' +
                 producto.prod_Categoria +
                 "</p><h1 class='text-center text-success'>" +
                 producto.prod_Nombre +
                 "</h1><p class='contenido '>$" +
                 producto.prod_Precio +
                 '</p><button type="button" class="btn btn-success">Agregar a Carrito</button></div></div></div></div></div></div>';
-            })
-          }
-        })
+            });
+          },
+        });
       }
-    })
+    });
   }
 
-  $('.categoria').on('click', function(e){
+  $(".categoria").on("click", function (e) {
     on_session();
-    var i = 0;    
+    var i = 0;
     if (window.location.pathname == "/src/views/index.html") {
       const productos = document.getElementById("productos");
       $.ajax({
@@ -78,8 +100,7 @@ $(document).ready(() => {
         type: "GET",
         datatype: "JSON",
         success: (res) => {
-
-          productos.innerHTML = ""
+          productos.innerHTML = "";
           res.forEach((producto) => {
             i++;
             productos.innerHTML +=
@@ -93,8 +114,8 @@ $(document).ready(() => {
             productos.innerHTML +=
               "<!-- Modal --><div  class='modal fade w-25'  id='exampleModal'  tabindex='-1'  aria-labelledby='exampleModalLabel'  aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header'><h1 class='modal-title fs-5 text-success'id='exampleModalLabel'>Mas información</h1><button type='button'class='btn-close'data-bs-dismiss='modal'aria-label='Close'></button></div><div class='modal-body'><i class='fa-regular fa-star'></i><img class='producto_img'src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png'alt=''/><p class='precio'>" +
               producto.prod_Categoria +
-              "</p><h1 class='text-center text-success'>" 
-              producto.prod_Nombre +
+              "</p><h1 class='text-center text-success'>";
+            producto.prod_Nombre +
               "</h1><p class='contenido '>$" +
               producto.prod_Precio +
               "</p><button type='button' class='btn btn-success'>Agregar a Carrito</button></div></div></div></div></div></div>";
@@ -102,12 +123,11 @@ $(document).ready(() => {
         },
       });
     }
-  })
-})
+  });
+});
 
 export const on_session = () => {
   var state = false;
-  console.log(sessionStorage.getItem("status"));
   if (sessionStorage.getItem("status") != null) {
     if (sessionStorage.getItem("status") == "usuario") {
       $("#op8")[0].innerHTML = buttons(
@@ -205,14 +225,10 @@ export const off_session = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-  $(".btn-hamburguesa").on("click", () => {
-  $(".barra")[0].style.display = "block"
-}) 
+$(".btn-hamburguesa").on("click", () => {
+  $(".barra")[0].style.display = "block";
+});
 
 $(".cerrar_barra").on("click", () => {
-  $(".barra")[0].style.display = "none"
-})
->>>>>>> 54aea13c9ded2c7004705fb830121353b4339ea3
-
+  $(".barra")[0].style.display = "none";
+});
