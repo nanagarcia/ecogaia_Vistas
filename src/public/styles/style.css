@@ -433,7 +433,7 @@ p.price {
   width: 10%;
   height: 10%;
   margin-top: 5%;
-  margin-left: 2%;
+  margin-left: 1%;
   background-color: rgba(255, 255, 255, 0.174);
 }
 
@@ -454,13 +454,6 @@ h3 {
   text-align: center;
 }
 
-.barras {
-  width: 25%;
-  height: 50%;
-  margin-top: 10%;
-  margin-left: 2%;
-  background-color: rgba(255, 255, 255, 0.174);
-}
 .barras h3 {
   color: white;
   text-align: center;
@@ -1705,8 +1698,8 @@ h3{
 
 .barras{
     width: 25%;
-    height: 50%;
-    margin-top: 10%;
+    height: 400px;
+    margin-top: 5%;
     margin-left: 2%;
     background-color: rgba(255, 255, 255, 0.174);  
 }
