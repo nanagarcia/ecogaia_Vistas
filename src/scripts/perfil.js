@@ -1,6 +1,7 @@
 import { on_session } from "./index.js";
 
 $(document).ready((e) => {
+    $(".barra")[0].style.backgroundColor = "#000000"
     const table = document.querySelector(".table-content")
     var user = sessionStorage.getItem("user")
 
@@ -38,6 +39,15 @@ $(document).ready((e) => {
     }
   });
 
+  $.ajax({
+    url: "http://localhost:8080/tipsUsuario/"+user,
+    type: "GET",
+    datatype: "JSON",
+    success: (res) => {
+        $("#cantBlog")[0].innerHTML = res.length
+        }
+    });
+
   $("#deleteAll").on("click", () => {
     $.ajax({
         url: "http://localhost:8080/usuario/"+sessionStorage.getItem("user"),
@@ -49,6 +59,7 @@ $(document).ready((e) => {
                 type: "DELETE",
                 success: (res) => {
                     alert(res)
+                    window.location.reload()
                 }
             })
         }
