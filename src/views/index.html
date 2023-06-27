@@ -22,6 +22,7 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
@@ -47,8 +48,9 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="../scripts/index.js"></script>
+
     <script src="../scripts/unmodule.js"></script>
+
     <title>Ecogaia</title>
   </head>
   <body id="body1">
@@ -57,7 +59,7 @@
       <!-- Barra de busqueda -->
 
       <div class="box">
-        <input type="text" id="search_product" placeholder="Search" />
+        <input type="text" placeholder="Search"z />
         <i class="fa solid fa-magnifying-glass"></i>
       </div>
 
@@ -99,7 +101,6 @@
               href="#offcanvasExample"
               role="button"
               aria-controls="offcanvasExample"
-              
             >
               <i class="fas fa-cart-shopping"></i>
               <span class="nav-item">Carrito</span>
@@ -109,7 +110,6 @@
               tabindex="-1"
               id="offcanvasExample"
               aria-labelledby="offcanvasExampleLabel"
-              style="z-index: 1;"
             >
               <div class="offcanvas-header">
                 <img src="../public/assets/hoja.png" alt="" />
@@ -124,17 +124,15 @@
                 ></button>
               </div>
               <div class="offcanvas-body">
-                <table class="table table-hover">
+                <table class="table table-hover" id="tablaCarrito">
                   <thead>
                     <tr class="titCarrito">
                       <th scope="col">Codigo</th>
                       <th scope="col">Producto</th>
                       <th scope="col">Cantidad</th>
                       <th scope="col">Total</th>
-                      <th scope="col"><i class="fas fa-trash"></i></th>
                     </tr>
                   </thead>
-                  <tbody id="tablaCarrito"></tbody>
                 </table>
                 <button
                 type="button"
@@ -283,24 +281,16 @@
   
 
     <!-- Contenido -->
-<<<<<<< HEAD
     
       <div class="productos flex-wrap d-flex" id="productos">
         
       </div>
 
 
-=======
-
-    <div class="productos " id="productos" style="display: flex; flex-wrap: wrap;">
-      
-    </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> 1e122b8a8dc1d9c07b1744767a0e6bd7dedc8493
     <!-- Footer -->
+    <div id="alerta" class="oculto" >
 
+    </div>
 
     <script src="../scripts/carrito.js"></script>
   </body>

@@ -1,4 +1,6 @@
 import { on_session } from "./index.js";
+import { mostrarOculto } from "./index.js";
+
 
 $(document).ready((e) => {
 
@@ -14,7 +16,8 @@ $(document).ready((e) => {
     
     if (user.usu_nombre == "" || user.usu_telefono == "" || user.usu_direccion == "" || user.usu_correo == "" || user.usu_contrasenia == "") {
 
-        alert("Completar todos los campos")
+      alerta.style.background="#dc3545"
+      mostrarOculto("Completar todos los campos")
     } else {
         $.ajax({
             url: "http://localhost:8080/insertarUsuario",

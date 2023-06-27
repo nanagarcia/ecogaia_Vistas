@@ -331,7 +331,7 @@ li a{
     width: 60px;
     position: fixed;
     float: right;
-    z-index: 1;
+    z-index: 0;
     bottom: 80px;
     right: 50px;
     transition: transform 0.3s ease;
@@ -346,6 +346,34 @@ li a{
     margin-left: 0%;
     width: auto;
 }
+
+
+  .oculto {
+    display: flex ;
+    align-items: center;
+    flex-direction: row;
+    width: 280px;
+    position: fixed;
+    top: 2%;
+    left: 80%;
+    transform: translateX(110%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px 15px;
+    color: white;
+    border-radius: 4px;
+    z-index: 999;
+
+  }
+  .oculto img{
+    margin-right: 10px;
+    
+  }
+
+  
+  .mostrar {
+    transform: translateX(-20%);
+  }
+  
 
 /* Añadir CARRITO ------------------------------------------------------------*/
 

@@ -310,11 +310,7 @@ export const on_session = () => {
       $("#op4")[0].style.display = "block";
       $("#op5")[0].style.display = "none";
       $("#op6")[0].style.display = "none";
-<<<<<<< HEAD
-      state = true
-=======
       state = true;
->>>>>>> 1e122b8a8dc1d9c07b1744767a0e6bd7dedc8493
     }
   } else {
     off_session();
@@ -361,3 +357,15 @@ export const off_session = () => {
   );
 };
 
+
+export function mostrarOculto(frase){
+  var alerta = document.getElementById("alerta");
+  
+  alerta.innerHTML= "<img src='../public/assets/alert_error.png'><span id='mensaje'></span>"
+  var mensaje = document.getElementById("mensaje");
+  alerta.classList.add("mostrar");
+    mensaje.innerHTML=frase
+    setTimeout(function() {
+      alerta.classList.remove("mostrar");
+    }, 3000);
+}
