@@ -123,6 +123,7 @@
               <tbody id="tablaCarrito"></tbody>
             </table>
             <button
+            onclick="comprar()"
             type="button"
             class="btn btn-success mb-2"
           >
@@ -188,24 +189,12 @@
       <!-- Botones CRUD -->
 
       <div class="btn_crud" id="buttons">
-        <input
-          class="btn_invt btn_Agre"
-          type="button"
-          value="Agregar"
-          id="btn_add_prod"
-        />
-        <input
-          class="btn_invt btn_Eli"
-          type="button"
-          value="Eliminar"
-          id="contrasenia"
-        />
-        <input
-          class="btn_invt"
-          type="button"
-          value="Actualizar"
-          id="contrasenia"
-        />
+
+        <button class="btn_invt btn_Agre" type="button" id="btn_add_prod"><span>Agregar</span></button>
+
+        <button class="btn_invt btn_Eli" type="button" id="contrasenia"><span>Eliminar</span></button>
+
+        <button class="btn_invt btn_Act" type="button" id="contrasenia"><span>Actualizar</span></button>
 
         <div class="formaddprodu" id="formaddprodu">
         </div>

@@ -9,7 +9,7 @@ $(document).ready((e) => {
   
   if(window.location.pathname == "/src/views/Blog.html"){
     const container = document.getElementById("container")
-  const listar = ()=> {
+    const listar = ()=> {
     $.ajax({
       url: "http://localhost:8080/listarTip",
       type: "GET",
@@ -29,7 +29,7 @@ $(document).ready((e) => {
           } else {
             titulo = blog.titulo
           }
-          container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
+          container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><p>"+blog.comp_usuario+"</p><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
         })
       },
     });
@@ -66,7 +66,7 @@ $(document).ready((e) => {
               } else {
                 titulo = blog.titulo
               }
-              container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
+              container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><p>"+blog.comp_usuario+"</p><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
             })
           }
         },
