@@ -22,6 +22,7 @@
       integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
       crossorigin="anonymous"
     ></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
       rel="stylesheet"
@@ -47,8 +48,9 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="../scripts/index.js"></script>
+
     <script src="../scripts/unmodule.js"></script>
+
     <title>Ecogaia</title>
   </head>
   <body id="body1">
@@ -65,13 +67,11 @@
       </div>
 
       <!-- Barra de busqueda -->
-
-      <div class="box">
-        <input type="text" id="search_product" placeholder="Search" />
-        <i class="fa solid fa-magnifying-glass"></i>
-      </div>
-
       
+        <div class="box">
+          <input type="text" id="search_product" placeholder="Search" />
+          <i class="fa solid fa-magnifying-glass"></i>
+        </div>
 
       <div class="carrusel container d-flex">
         <!-- barra -->
@@ -113,7 +113,6 @@
               href="#offcanvasExample"
               role="button"
               aria-controls="offcanvasExample"
-              
             >
               <i class="fas fa-cart-shopping"></i>
               <span class="nav-item">Carrito</span>
@@ -137,19 +136,23 @@
                 ></button>
               </div>
               <div class="offcanvas-body">
-                <table class="table table-hover">
+                <table class="table table-hover" id="tablaCarrito">
                   <thead>
                     <tr class="titCarrito">
                       <th scope="col">Codigo</th>
                       <th scope="col">Producto</th>
                       <th scope="col">Cantidad</th>
                       <th scope="col">Total</th>
-                      <th scope="col"><i class="fas fa-trash"></i></th>
                     </tr>
                   </thead>
-                  <tbody id="tablaCarrito"></tbody>
                 </table>
-                <button type="button" class="comp_carrito"><span>Comprar</span></button>
+                <button
+                onclick="comprar()"
+                type="button"
+                class="btn btn-success mb-2"
+              >
+                Comprar
+              </button>
               </div>
             </div>
           </li>
@@ -273,33 +276,37 @@
 
     <div class="categorias">
 
-      <div class="categoria">
-
-        <a class="align-content-center button cate" href="#"  id="todos"><img src="../public/assets/productos.png" alt=""></a>
+      <div class="categoria-contenedor">
+        <script>
+          const todo = () => {
+            window.location.reload()
+          }
+        </script>
+        <a class="align-content-center button cate" href="#" onclick="todo()" ><img src="../public/assets/productos.png" alt=""></a>
           
       </div>
 
-      <div class="categoria">
+      <div class="categoria-contenedor">
 
-        <a class="align-content-center button cate" href="#"  id="hogar"><img  src="../public/assets/hogar.png" alt=""></a>
+        <a class="align-content-center button cate" href="#" ><img class="categoria"  src="../public/assets/hogar.png" alt="Hogar"></a>
         
       </div>
 
-      <div class="categoria">
+      <div class="categoria-contenedor">
 
-        <a href="#" class="align-content-center button cate" id="mascotas"><img src="../public/assets/mascotas.png" alt=""></a>
-
-      </div>
-
-      <div class="categoria">
-
-        <a href="#" class="align-content-center button cate" id="maquillaje"><img src="../public/assets/maquillaje.png" alt=""></a>
+        <a href="#" class="align-content-center button cate"><img class="categoria" src="../public/assets/mascotas.png" alt="Mascotas"></a>
 
       </div>
 
-      <div class="categoria">
+      <div class="categoria-contenedor">
 
-        <a href="#" class="align-content-center button cate" id="higiene"><img src="../public/assets/higiene.png" alt=""></a>
+        <a href="#" class="align-content-center button cate"><img class="categoria" src="../public/assets/maquillaje.png" alt="Maquillaje"></a>
+
+      </div>
+
+      <div class="categoria-contenedor">
+
+        <a href="#" class="align-content-center button cate"><img class="categoria" src="../public/assets/higiene.png" alt="Personal"></a>
 
       </div>
 
@@ -308,12 +315,24 @@
   
 
     <!-- Contenido -->
+    
+      <div class="productos flex-wrap d-flex" id="productos">
+        
+      </div>
 
+<<<<<<< HEAD
     <div class="productos " id="productos" style="display: flex; flex-wrap: wrap;">
       
     </div>
 
     <!-- Footer -->
+=======
+
+    <!-- Footer -->
+    <div id="alerta" class="oculto" >
+
+    </div>
+>>>>>>> e108a3f6d81ffb4599ae9969980fc5614e33bea5
 
     <script src="../scripts/carrito.js"></script>
   </body>

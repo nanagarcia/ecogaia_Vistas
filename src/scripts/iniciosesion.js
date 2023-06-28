@@ -1,26 +1,33 @@
 import { on_session } from "./index.js";
+import { mostrarOculto } from "./index.js";
+
 
 $(document).ready((e) => {
   $("#log_in").on("click", () => {
     const email = $("#correo").val();
     const pass = $("#contrasenia").val();
     console.log(email + pass);
+    if (email == "" || pass == "") {      
 
-    if (email == "" || pass == "") {
-      alert("Debes completar todos los campos");
-    } else {
+      alerta.style.background="#E97578"
+      mostrarOculto("Completa todos los campos")
+
+
+     } else {
       $.ajax({
         url: "http://localhost:8080/validarUsuario/" + email + "/" + pass,
         type: "GET",
         datatype: "JSON",
         success: (res) => {
           if (res.error != "Usuario o contraseña incorrectos") {
-            alert(res)
+            alerta.style.background="#dc3545"
+            mostrarOculto(res)
             sessionStorage.setItem("status", res.rol);
             sessionStorage.setItem("user", res.res)
             window.location.href = "index.html";
           } else {
-            alert(res.error);
+            alerta.style.background="#dc3545"
+            mostrarOculto(res.error)
           }
         },
         error: (xhr, status, error) => {
@@ -32,6 +39,7 @@ $(document).ready((e) => {
   });
 });
 
+<<<<<<< HEAD
 $(".btn-hamburguesa").on("click", () => {
   $(".barra")[0].style.display = "block"
 }) 
@@ -39,3 +47,6 @@ $(".btn-hamburguesa").on("click", () => {
 $(".cerrar_barra").on("click", () => {
   $(".barra")[0].style.display = "none"
 })
+=======
+
+>>>>>>> e108a3f6d81ffb4599ae9969980fc5614e33bea5

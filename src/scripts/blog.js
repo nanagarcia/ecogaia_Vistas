@@ -1,4 +1,6 @@
 import { on_session } from "./index.js";
+import { mostrarOculto } from "./index.js";
+
 
 $(document).ready((e) => {
   if(!on_session()) {
@@ -7,7 +9,7 @@ $(document).ready((e) => {
   
   if(window.location.pathname == "/src/views/Blog.html"){
     const container = document.getElementById("container")
-  const listar = ()=> {
+    const listar = ()=> {
     $.ajax({
       url: "http://localhost:8080/listarTip",
       type: "GET",
@@ -27,7 +29,7 @@ $(document).ready((e) => {
           } else {
             titulo = blog.titulo
           }
-          container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
+          container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><p>"+blog.comp_usuario+"</p><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
         })
       },
     });
@@ -64,7 +66,7 @@ $(document).ready((e) => {
               } else {
                 titulo = blog.titulo
               }
-              container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
+              container.innerHTML += "<div class='blog-box' id='tip"+blog.codigo_tip+"'><div class='blog-text2'><span>"+blog.fecha+"</span><p>"+blog.comp_usuario+"</p><img src='../public/assets/imgblosgs.jpg' class='blog_in' alt='' /><h2>"+titulo+"</h2><p>"+cuerpo+"</p></div></div>"
             })
           }
         },
@@ -83,7 +85,8 @@ $(document).ready((e) => {
       cuerpo: $("#content_blog").val(),
     };
     if (blog.titulo == "" || blog.content == "") {
-      alert("Completar todos los campos")
+      alerta.style.background="#EBD166"
+      mostrarOculto("Completar todos los campos")
   } else {
 
     $.ajax({
@@ -93,11 +96,12 @@ $(document).ready((e) => {
       dataType: "text",
       success: (res) => {
         if(res != "No se agrego el tip"){
-          alert(res)
+          alerta.style.background="#EBD166"
+          mostrarOculto(res)
           window.location.href = "/src/views/Blog.html"
         }else{
-          alert(res)
-        }
+          alerta.style.background="#EBD166"
+          mostrarOculto(res)        }
         console.log(res);
       },
       error:(xhr,status,error)=>{

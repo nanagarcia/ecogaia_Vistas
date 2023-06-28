@@ -47,6 +47,7 @@
     <script type="module" src="../scripts/perfil.js"></script>
     <script src="../scripts/unmodule.js"></script>
   </head>
+<<<<<<< HEAD
   <body id="body3">
 
     <!-- barra de navegacion responsive -->
@@ -59,6 +60,9 @@
 
     </div>
 
+=======
+  <body id="body2">
+>>>>>>> e108a3f6d81ffb4599ae9969980fc5614e33bea5
     <!--barra navegacion-------------->
     <nav class="barra">
       <li id="">
@@ -132,7 +136,13 @@
               </thead>
               <tbody id="tablaCarrito"></tbody>
             </table>
-            <button type="button" class="comp_carrito"><span>Comprar</span></button>
+            <button
+            onclick="comprar()"
+            type="button"
+            class="btn btn-success mb-2"
+          >
+            Comprar
+          </button>
           </div>
         </div>
       </li>
@@ -183,8 +193,11 @@
       </div>
 
       <div class="right-side">
-        <div class="container">
+        <div class="container2">
           <h1 class="title" id="userName">Usuario</h1>
+          <div class="description-container">
+            <span class="low" id="userEmail">usuario123@gmail.com</span>
+          </div>
           <a href="./actualizacion.html" class="edit-profile">Editar perfil</a>
         </div>
 
@@ -199,9 +212,7 @@
           </div>
         </div>
 
-        <div class="description-container">
-          <span class="low" id="userEmail">usuario123@gmail.com</span>
-        </div>
+       
       </div>
     </div>
 
@@ -210,20 +221,24 @@
     <div class="barra-navegacion">
       <span class="item">Favoritos</span>
     </div>
-
-    <table class="table table-active w-75 m-auto">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Imagen</th>
-          <th scope="col">Producto</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col"><i class="fas fa-trash" id="deleteAll"></i></th>
-        </tr>
-      </thead>
-      <tbody class="table-content"></tbody>
-    </table>
+    <div class="table-responsive-md">
+      <table class="table table-active w-75 m-auto">
+        <thead >
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col"><i class="fas fa-trash" id="deleteAll"></i></th>
+          </tr>
+        </thead>
+        <tbody class="table-content"></tbody>
+      </table>
+  </div>
     <script src="../scripts/carrito.js"></script>
+    <div id="alerta" class="oculto" >
+
+    </div>
   </body>
 </html>

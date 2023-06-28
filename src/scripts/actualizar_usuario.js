@@ -1,4 +1,6 @@
 import { on_session } from "./index.js";
+import { mostrarOculto } from "./index.js";
+
 
 $(document).ready((e) => {
   const val = sessionStorage.getItem("user");
@@ -37,7 +39,9 @@ $(document).ready((e) => {
           rol: rol,
         },
         success: (res) => {
-          alert(res);
+
+          alerta.style.background="#dc3545"
+          mostrarOculto(res)
           window.location.href = "iniciosesion.html"
           sessionStorage.removeItem("user")
           sessionStorage.removeItem("status")
@@ -49,7 +53,8 @@ $(document).ready((e) => {
         },
       });
     } else {
-      alert("Las contraseñas no coinciden");
+      alerta.style.background="#EBD166"
+      mostrarOculto("Las contraseñas no coinciden")
     }
   });
 });
