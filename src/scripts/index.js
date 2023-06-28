@@ -129,7 +129,8 @@ $(document).ready(() => {
               i +
               "'>Mas información</button>";
             productos.innerHTML +=
-              "<!-- Modal --><div  class='modal fade w-25'  id='exampleModal'  tabindex='-1'  aria-labelledby='exampleModalLabel'  aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header'><h1 class='modal-title fs-5 text-success'id='exampleModalLabel'>Mas información</h1><button type='button'class='btn-close'data-bs-dismiss='modal'aria-label='Close'></button></div><div class='modal-body'><i class='fa-regular fa-star'></i><img class='producto_img'src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png'alt=''/><p class='precio'>" +
+            
+              "<!-- Modal --><div  class='modal'  id='exampleModal'  tabindex='-1'  aria-labelledby='exampleModalLabel'  aria-hidden='true'><div class='modal-dialog modal-dialog-centered'><div class='modal-content'><div class='modal-header'><h1 class='modal-title fs-5 text-success'id='exampleModalLabel'>Mas información</h1><button type='button'class='btn-close'data-bs-dismiss='modal'aria-label='Close'></button></div><div class='modal-body'><i class='fa-regular fa-star'></i><img class='producto_img'src='https://frutosalvaje.com/wp-content/uploads/2021/11/Cepillo-de-Bambu_1-1-1536x1536.png'alt=''/><p class='precio'>" +
               producto.prod_Categoria +
               "</p><h1 class='text-center text-success'>" 
               producto.prod_Nombre +
@@ -253,7 +254,14 @@ $(document).ready(() => {
     }
   })
 
+  window.addEventListener('resize', () => {
+      const largo = window.innerHeight
+      const ancho = window.innerWidth
 
+      if (largo > 320 && ancho > 620) {
+        $(".barra")[0].style.display = "block"
+      }
+  })
 });
 
 
@@ -360,6 +368,7 @@ export const off_session = () => {
   $(".btn-hamburguesa").on("click", () => {
   $(".barra")[0].style.display = "block"
 }) 
+
 
 $(".cerrar_barra").on("click", () => {
   $(".barra")[0].style.display = "none"
